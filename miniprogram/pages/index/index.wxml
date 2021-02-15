@@ -1,0 +1,1 @@
+<button type='primary' bindtap='getdata' >点击获取数据</button>
