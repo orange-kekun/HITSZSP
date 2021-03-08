@@ -1,1 +1,77 @@
-<button type='primary' bindtap='getdata' >点击获取数据</button>
+<search></search>
+
+<swiper  class='s-box'autoplay="true" circular="true"   next-margin="120px">
+<swiper-item class='s-one'>
+111
+</swiper-item>
+
+
+
+
+<swiper-item class='s-two'>
+  222
+</swiper-item>
+
+
+
+
+<swiper-item class='s-three'>
+ 333 
+</swiper-item>
+
+
+
+</swiper>
+
+
+
+
+
+
+
+
+
+
+<view class='sort'> 
+<view class='one'><navigator><image></image></navigator></view>
+
+<view class='two'><navigator><image></image></navigator></view>
+
+<view class='three'><navigator><image></image></navigator></view>
+
+<view class='four'><navigator><image></image></navigator></view>
+</view>
+<scroll-view scroll-x>
+  <view class="srcout">
+<view class='srcbox'>
+<navigator ><image>
+
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+
+
+</image></navigator>
+</view>
+</view>
+</scroll-view>
