@@ -1,13 +1,42 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/search/search",
+    "pages/mine/mine",
+    "pages/canteen_one/canteen_one",
+    "pages/canteen_three/canteen_three",
+    "pages/canteen_two/canteen_two"
   ],
   "window": {
-    "backgroundColor": "#F6F6F6",
+    "backgroundColor": "#FE8848",
     "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#ffa500",
-    "navigationBarTitleText": "HITSZ食谱",
-    "navigationBarTextStyle": "black"
+    "navigationBarBackgroundColor": "#FE8848",
+    "navigationBarTitleText": "HITSZ-RECIPE",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#999",
+    "selectedColor": "#999",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tabbar-home.png",
+        "selectedIconPath": "images/tabbar-home-se.png"
+      },
+      {
+        "pagePath": "pages/search/search",
+        "text": "搜索",
+        "iconPath": "images/tabbar-search.png",
+        "selectedIconPath": "images/tabbar-search-se.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/tabbar-mine.png",
+        "selectedIconPath": "images/tabbar-mine-se.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json",
   "style": "v2"
