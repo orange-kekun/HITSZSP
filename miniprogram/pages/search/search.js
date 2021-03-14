@@ -1,66 +1,52 @@
-// pages/search/search.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    inputVal: '',
+    inputShowed: false,
+    search_list1: [],
   },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  showInput: function () {
+    this.setData({
+      inputShowed: true
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
+  hideInput: function () {
+    this.setData({
+      inputVal: "",
+      inputShowed: false
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
+  clearInput: function () {
+    this.setData({
+      inputVal: ""
+    });
   },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+  inputTyping: function (e) {
+    this.setData({
+      inputVal: e.detail.value
+    });
+    //连接数据库
+    const db = wx.cloud.database()
+    var that = this
+    db.collection('cantee1','canteen2','canteen3').where({
+      //使用正则查询，实现对搜索的模糊查询
+      name: db.RegExp({
+        regexp: e.detail.value,
+        //从搜索栏中获取的value作为规则进行匹配。
+        options: 'i',
+        //大小写不区分
+      }),
+      
+    }).limit(10).get({
+      success: res => {
+        console.log(res)
+        that.setData({
+          search_list1: res.data
+        })
+      }
+    })
   }
-})
+  })
