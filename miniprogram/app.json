@@ -8,8 +8,8 @@
     "pages/canteen_two/canteen_two",
     "pages/aboutme/aboutme",
     "pages/mycollect/mycollect",
-    "pages/mycomment/mycomment",
-    "pages/askme/askme"
+    "pages/mycomment/mycomment"
+
 
   ],
   "window": {
