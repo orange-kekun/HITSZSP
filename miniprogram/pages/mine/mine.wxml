@@ -1,2 +1,39 @@
 <!--pages/mine/mine.wxml-->
-<text>pages/mine/mine.wxml</text>
+<view class="pagecolor">
+  <view class='head head-height'>
+    <block wx:if="{{!hasUserInfo && canIUse}}">
+      <view class="userinfo">
+        <image class="userinfo-avatar" src="../../images/mineicon/myhead.png" mode="cover"></image>
+        <text class="userinfo-nickname">微信授权</text>
+      </view>
+      <button class="login-button head-height" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    </block>
+    <block wx:else>
+      <view class="userinfo">
+        <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+        <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+      </view>
+    </block>
+  </view>
+
+  <view class="list hrcolor">
+    <view class="list-wrapper">
+      <block wx:for="{{menuitems}}" wx:key="item">
+        <navigator url="{{item.url}}" class="list-item" hover-class="list-item_active">
+          <view class='item'>
+            <image class='item-image' src='{{item.icon}}'></image>
+            <text class="item-text">{{item.text}}</text>
+            <text class='item-array'></text>
+          </view>
+          <view class="div-line"></view>
+        </navigator>
+      </block>
+    </view>
+    <button class="button"  open-type='contact'>
+      <image class='btnimg' src='../../images/mineicon/askme.png'></image>
+      <view class="btnfont">意见反馈</view>
+    </button>
+    <view class="dibufont" style="position:fixed; bottom:0;width: 750rpx" >v1.0</view>
+  </view>
+  
+</view>

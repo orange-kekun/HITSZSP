@@ -1,1 +1,129 @@
-/* pages/mine/mine.wxss */
+.pagecolor{
+    min-height: 100vh;
+    background-color:#f4f5f6;
+}
+.hrcolor{
+  background-color: white;
+}
+.head-height {
+  height: 300rpx;
+}
+.head {
+  display:flex;
+  width: 100%;
+  background: size 250rpx;
+  background:linear-gradient(#fe8848,white);
+  align-items: center;
+}
+ 
+.login-button {
+  opacity: 0; 
+  width: 100%;
+  position: fixed;
+}
+ 
+.userinfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  position: fixed;
+}
+ 
+.userinfo-avatar {
+  width: 150rpx;
+  height: 150rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+ 
+.userinfo-nickname {
+  color: #333333;
+  font-size: 42rpx;
+}
+
+.list{
+
+    border: 3rpx solid white;
+   border-radius: 10rpx;
+     padding: 10rpx;
+     margin:20rpx 20rpx;
+ }
+
+.list-wrapper {
+  width: 100%;
+  
+}
+
+/* 横着的分割View样式 */
+/*分割线样式*/
+.div-line{
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+}
+
+.list-item {
+  width: 100%;
+  height: 120rpx;
+}
+
+.list-item_active {
+  background-color: #E0E3DA;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 100rpx;
+}
+.item-text {
+  position:absolute;
+  left: 100rpx;
+  font-size: 38rpx;
+}
+.item-array {
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    position: absolute;
+    right: 40rpx;
+    transform: rotate(45deg);
+}
+
+.item-image {
+  position: absolute;
+  left: 50rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+.button{
+  margin: 50rpx;
+  width:200rpx;
+  height: 125rpx;
+  border-radius: 100rpx;
+  background-color:#fea06e;
+  color: white;
+  line-height: 35rpx;
+  align-items: center;
+  text-align: center;
+
+}
+.btnimg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+.btnfont{
+  font-weight: 160;
+}
+.dibufont{
+  font-size:small;
+  color:#777777;
+  text-align:center;
+}
+.block{
+  border-radius: 100rpx;
+}
