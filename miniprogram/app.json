@@ -5,7 +5,8 @@
     "pages/mine/mine",
     "pages/canteen_one/canteen_one",
     "pages/canteen_three/canteen_three",
-    "pages/canteen_two/canteen_two"
+    "pages/canteen_two/canteen_two",
+    "pages/canteen_four/canteen_four"
   ],
   "window": {
     "backgroundColor": "#FE8848",

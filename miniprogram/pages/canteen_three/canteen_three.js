@@ -1,4 +1,4 @@
-// miniprogram/pages/canteen_three/canteen_three.js
+
 Page({
 
   /**
@@ -6,20 +6,23 @@ Page({
    */
   data: {
 
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    db.collection("canteen3").get().then(res=>{
+     this.setdata
+    })
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-
+   
   },
 
   /**
