@@ -1,0 +1,41 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/mine/mine",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen_one/canteen_one",
+          "pathName": "pages/canteen_one/canteen_one",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen_three/canteen_three",
+          "pathName": "pages/canteen_three/canteen_three",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/index/index",
+          "pathName": "pages/index/index",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

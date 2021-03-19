@@ -6,7 +6,10 @@
     "pages/canteen_one/canteen_one",
     "pages/canteen_three/canteen_three",
     "pages/canteen_two/canteen_two",
-    "pages/canteen_four/canteen_four"
+    "pages/aboutme/aboutme",
+    "pages/mycollect/mycollect",
+    "pages/mycomment/mycomment",
+    "pages/dishes/dish_3001/dish_3001"
   ],
   "window": {
     "backgroundColor": "#FE8848",
