@@ -1,1 +1,17 @@
 /* pages/aboutme/aboutme.wxss */
+.pagecolor{
+  min-height: 100%;
+  background-color:#f3f3f3;
+}
+.backimage{
+  width: 100%;
+}
+.title{
+  font-weight: bold;
+}
+.line{
+  display: flex;
+  line-height:1.5em; 
+
+  margin: 20rpx;
+}
