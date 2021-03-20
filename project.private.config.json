@@ -19,20 +19,8 @@
           "scene": null
         },
         {
-          "name": "pages/canteen_one/canteen_one",
-          "pathName": "pages/canteen_one/canteen_one",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/canteen_three/canteen_three",
-          "pathName": "pages/canteen_three/canteen_three",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/index/index",
-          "pathName": "pages/index/index",
+          "name": "pages/aboutme/aboutme",
+          "pathName": "pages/aboutme/aboutme",
           "scene": null
         }
       ]

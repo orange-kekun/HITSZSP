@@ -1,2 +1,11 @@
 <!--pages/aboutme/aboutme.wxml-->
-<text>pages/aboutme/aboutme.wxml</text>
+<view class="pagecolor">
+<image src="../../images/aboutme.jpg" mode="widthFix" class='backimage' >
+</image>   
+
+<text class="line">
+     <text class="title" >ps:</text>
+hitsz食谱小程序由哈工深学生团队开发，不代表官方。有任何问题可以点击吐槽一下联系开发者哦~
+</text>
+
+</view>
