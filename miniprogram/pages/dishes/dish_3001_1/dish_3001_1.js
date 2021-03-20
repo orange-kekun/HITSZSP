@@ -1,4 +1,4 @@
-// miniprogram/pages/dishes/dish_3001/dish_3001.js
+// miniprogram/pages/dishes/dish_3001_1/dish_3001_1.js
 Page({
 
   /**
