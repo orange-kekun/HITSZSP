@@ -208,23 +208,13 @@ Page({
     const db=wx.cloud.database()
     const _=db.command//find and update command
     db.collection("canteen3").field({
-id:true,
-dangkou:true,
-weidao:true,
     }).get().then(res=>{
-      this.setData(
-        {
-        
-          // 这里到时就把上面写死的数组替换成云端的
-          //cateItems:res.data
-
-        }
-      )
+      console.log(res.data)
     }).catch(err=>{console.log(err)})
   },
   //事件处理函数  
   switchRightTab: function (e) {
-    console.log(e);
+    //console.log(e);
     // 获取item项的id，和数组的下标值  
     let id = e.target.dataset.id,
     index = parseInt(e.target.dataset.index);

@@ -33,10 +33,20 @@ page{
   font-size: 30rpx; 
 }  
 /*左侧栏list的item被选中时*/  
-.nav_left .nav_left_items.active{  
+.nav_left .nav_left_itemsactive{  
   /*背景色变成白色*/  
   background: #fff;  
   color: #FE8848; 
+   /*每个高30px*/  
+   height: 90rpx;  
+   /*垂直居中*/  
+   line-height: 80rpx;  
+   /*再设上下padding增加高度，总高42px*/  
+   padding: 12rpx 0;  
+   /*只设下边线*/  
+   border-bottom: 2rpx solid #dedede;  
+   /*文字14px*/  
+   font-size: 30rpx; 
 }  
 /*右侧栏主盒子*/  
 .nav_right{  

@@ -1,2 +1,40 @@
-<!--miniprogram/pages/canteen_four/canteen_four.wxml-->
-<text>miniprogram/pages/canteen_four/canteen_four.wxml</text>
+<searchbar></searchbar>
+
+<!-- 主盒子 -->
+<view class="con">
+ <!--左侧栏-->
+ <view class="nav_left">
+   <block wx:for="{{items}}" wx:key="*this">
+     <view class="nav_left_items{{index==curindex?'active':''}}" data-index="{{index}}"
+     bindtap="tap">
+       {{item.dangkou.dangkou_name}}
+      
+      </view>
+   </block>
+ </view>
+ <!--右侧栏-->
+ <view class="nav_right">
+       <!-- 右侧的滚动scroll-view -->
+    <scroll-view class="srcright" enable-flex scroll-y="true" style="height:1334rpx">
+
+    <block wx:for="{{items[curindex].dangkou.meal}}" wx:key="value">
+       <!-- 档口的一个菜品 -->
+      <view class="nav_right_items">
+       <!-- 左部分为图片 -->
+       <navigator >
+           <image src="{{item.picture}}"></image>
+         </navigator>
+         <!-- 右部分为文字 -->
+         <view class="text">
+          <text class="head">{{item.meal_name}}</text>
+          <text class="price">{{item.price}}</text>
+         </view>
+       </view>
+
+     </block>
+    </scroll-view>
+
+ 
+ </view>
+</view>
+

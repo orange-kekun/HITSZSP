@@ -39,6 +39,7 @@
   "appid": "wx1e75861d122a0acf",
   "projectname": "HITSZ-recipe",
   "libVersion": "2.14.1",
+  "cloudfunctionTemplateRoot": "cloudfunctionTemplate",
   "condition": {
     "search": {
       "list": []

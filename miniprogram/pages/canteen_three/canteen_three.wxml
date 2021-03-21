@@ -1,31 +1,32 @@
 <searchbar></searchbar>
-<!--主盒子-->
+
+<!-- 主盒子 -->
 <view class="con">
  <!--左侧栏-->
  <view class="nav_left">
-   <block wx:for="{{cateItems}}" wx:key="*this">
-     <!--当前项的id等于item项的id，那个就是当前状态-->
-     <!--用data-index记录这个数据在数组的下标位置，使用data-id设置每个item的id值，供打开2级页面使用-->
-     <view class="nav_left_items {{curNav == item.cate_id ? 'active' : ''}}" bindtap="switchRightTab" data-index="{{index}}" data-id="{{item.cate_id}}">{{item.cate_name}}</view>
+   <block wx:for="{{items}}" wx:key="*this">
+     <view class="nav_left_items{{index==curindex?'active':''}}" data-index="{{index}}"
+     bindtap="tap">
+       {{item.dangkou.dangkou_name}}
+      
+      </view>
    </block>
  </view>
  <!--右侧栏-->
  <view class="nav_right">
-   <!--如果有数据，才遍历项-->
-   <view wx:if="{{cateItems[curIndex].ishaveChild}}">
        <!-- 右侧的滚动scroll-view -->
     <scroll-view class="srcright" enable-flex scroll-y="true" style="height:1334rpx">
 
-    <block wx:for="{{cateItems[curIndex].children}}" wx:key="value">
+    <block wx:for="{{items[curindex].dangkou.meal}}" wx:key="value">
        <!-- 档口的一个菜品 -->
       <view class="nav_right_items">
        <!-- 左部分为图片 -->
-       <navigator url="{{item.page}}">
-           <image src="{{item.image}}"></image>
+       <navigator >
+           <image src="{{item.picture}}"></image>
          </navigator>
          <!-- 右部分为文字 -->
          <view class="text">
-          <text class="head">{{item.name}}</text>
+          <text class="head">{{item.meal_name}}</text>
           <text class="price">{{item.price}}</text>
          </view>
        </view>
@@ -33,9 +34,7 @@
      </block>
     </scroll-view>
 
-   </view>
-   <!--如果无数据，则显示数据-->
-   <view  wx:else>该分类暂无数据</view>
+ 
  </view>
 </view>
 
