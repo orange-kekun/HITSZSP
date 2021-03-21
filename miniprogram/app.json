@@ -8,9 +8,9 @@
     "pages/canteen_two/canteen_two",
     "pages/aboutme/aboutme",
     "pages/mycollect/mycollect",
-    "pages/mycomment/mycomment"
-
-
+    "pages/mycomment/mycomment",
+    "pages/dishes/dish_3001/dish_3001",
+    "pages/dishes/dish_3001_1/dish_3001_1"
   ],
   "window": {
     "backgroundColor": "#FE8848",
@@ -26,20 +26,20 @@
       {
         "pagePath": "pages/index/index",
         "text": "首页",
-        "iconPath": "images/tabbar-home.png",
-        "selectedIconPath": "images/tabbar-home-se.png"
+        "iconPath": "images_/home_1.png",
+        "selectedIconPath": "images_/home_2.png"
       },
       {
         "pagePath": "pages/search/search",
         "text": "搜索",
-        "iconPath": "images/tabbar-search.png",
-        "selectedIconPath": "images/tabbar-search-se.png"
+        "iconPath": "images_/shipu_1.png",
+        "selectedIconPath": "images_/shipu_2.png"
       },
       {
         "pagePath": "pages/mine/mine",
         "text": "我的",
-        "iconPath": "images/tabbar-mine.png",
-        "selectedIconPath": "images/tabbar-mine-se.png"
+        "iconPath": "images_/me_1.png",
+        "selectedIconPath": "images_/me_2.png"
       }
     ]
   },
