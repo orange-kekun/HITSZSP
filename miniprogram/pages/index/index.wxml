@@ -1,28 +1,23 @@
 <search></search>
 
-<swiper indicator-dots="true" indicator-active-color="#ff8800" autoplay="true" interval="3000" circular="true">
-  <swiper-item><image  src="../../images/CanteenPicture/cateen1.jpg" mode="aspectFill"></image></swiper-item>
-  <swiper-item><image  src="../../images/CanteenPicture/cateen2.jpg" mode="aspectFill"></image></swiper-item>
-  <swiper-item><image  src="../../images/CanteenPicture/cateen3.jpg" mode="aspectFill"></image></swiper-item>
-  </swiper>
 
 <swiper  class='s-box'autoplay="true" circular="true"   next-margin="120px">
 <swiper-item class='s-one'>
-111
+  <image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen1.jpg" ></image>
 </swiper-item>
 
 
 
 
 <swiper-item class='s-two'>
-  222
+  <image   mode="scaleToFill" src="../../images/CanteenPicture/cateen2.jpg" ></image>
 </swiper-item>
 
 
 
 
 <swiper-item class='s-three'>
- 333 
+  <image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen3.jpg" ></image>
 </swiper-item>
 
 
@@ -39,13 +34,12 @@
 
 
 <view class='sort'> 
-<view class='one'><navigator><image></image></navigator></view>
+<view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen1.jpg"></image></navigator></view>
+<view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaleToFill" src="../../images/CanteenPicture/cateen2.jpg" ></image></navigator></view>
 
-<view class='two'><navigator><image></image></navigator></view>
+<view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen3.jpg" ></image></navigator></view>
 
-<view class='three'><navigator><image></image></navigator></view>
-
-<view class='four'><navigator><image></image></navigator></view>
+<view class='four'><navigator url="/pages/canteen_four/canteen_four">four</navigator></view>
 </view>
 <scroll-view scroll-x>
   <view class="srcout">
