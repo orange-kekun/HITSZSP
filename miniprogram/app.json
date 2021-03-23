@@ -31,8 +31,8 @@
       {
         "pagePath": "pages/search/search",
         "text": "搜索",
-        "iconPath": "images_/shipu_1.png",
-        "selectedIconPath": "images_/shipu_2.png"
+        "iconPath": "images_/search_1.png",
+        "selectedIconPath": "images_/search_2.png"
       },
       {
         "pagePath": "pages/mine/mine",
