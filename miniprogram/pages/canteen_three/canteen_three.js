@@ -17,6 +17,7 @@ Page({
     const _=db.command
     db.collection("canteen3").get().then(res=>{console.log(res.data)
     this.setData({
+      // 获取的值赋给items
       items:res.data
     })
     }).catch(err=>{console.log(err)})

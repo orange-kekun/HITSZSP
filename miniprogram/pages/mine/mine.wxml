@@ -31,7 +31,7 @@
     </view>
     <button class="button"  open-type='contact'>
       <image class='btnimg' src='../../images/mineicon/askme.png'></image>
-      <view class="btnfont">意见反馈</view>
+      <view class="btnfont">吐槽一下/上新告知</view>
     </button>
     <view class="dibufont" style="position:fixed; bottom:0;width: 750rpx" >v1.0</view>
   </view>
