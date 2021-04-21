@@ -70,7 +70,7 @@ height: 200rpx;
 width: 100%;
 
 }  
-.nav_right .nav_right_items image{  
+.nav_right .nav_right_items .image{  
  height: 180rpx;
  width: 180rpx;
  border-radius: 2px;
@@ -79,13 +79,17 @@ width: 100%;
 .nav_right .nav_right_items .text{  
 display: flex;
 flex-direction: column;
-justify-content: space-between;
+justify-content: space-between; 
+padding: 10rpx;
+
 } 
 .nav_right .nav_right_items .text .head
 {
-  font:bold 30px "宋体";
+  font:bold 45rpx "宋体";
+  color:#2e2e2e;
 }
 .nav_right .nav_right_items .text .price
 {
-  font-size: 20px;
+  font-size: 30rpx;
+  color:#2e2e2e;
 }

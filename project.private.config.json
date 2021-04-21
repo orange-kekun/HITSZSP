@@ -21,6 +21,13 @@
         {
           "name": "pages/aboutme/aboutme",
           "pathName": "pages/aboutme/aboutme",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/canteen_two/canteen_two",
+          "pathName": "pages/canteen_two/canteen_two",
+          "query": "",
           "scene": null
         }
       ]

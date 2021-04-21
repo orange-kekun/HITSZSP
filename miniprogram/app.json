@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/index/index",
+    "pages/details/details",
     "pages/search/search",
     "pages/mine/mine",
     "pages/canteen_one/canteen_one",
@@ -10,6 +11,7 @@
     "pages/mycollect/mycollect",
     "pages/mycomment/mycomment",
     "pages/dishes/dish_3001_1/dish_3001_1"
+
   ],
   "window": {
     "backgroundColor": "#FE8848",

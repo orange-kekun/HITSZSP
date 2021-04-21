@@ -117,6 +117,7 @@
 }
 .btnfont{
   font-weight: 160;
+  font-size:30rpx;
 }
 .dibufont{
   font-size:small;
