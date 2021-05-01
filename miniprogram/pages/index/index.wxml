@@ -3,27 +3,27 @@
 
 <swiper  class='s-box'autoplay="true" circular="true"   next-margin="120px">
 <swiper-item class='s-one'>
-  <image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen1.jpg" ></image>
+  <image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_1.jpg" ></image>
 </swiper-item>
 
 
 
 
 <swiper-item class='s-two'>
-  <image   mode="scaleToFill" src="../../images/CanteenPicture/cateen2.jpg" ></image>
+  <image   mode="scaleToFill" src="../../images/CanteenPicture/canteen_2.jpg" ></image>
 </swiper-item>
 
 
 
 
 <swiper-item class='s-three'>
-  <image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen3.jpg" ></image>
+  <image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_3.jpg" ></image>
 </swiper-item>
 
 
 
 <swiper-item class='s-four'>
-  <image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen3.jpg" ></image>
+  <image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_4.jpg" ></image>
 </swiper-item>
 
 
@@ -40,16 +40,18 @@
 
 
 <view class='sort'> 
-<view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen1.jpg"></image></navigator></view>
-<view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaleToFill" src="../../images/CanteenPicture/cateen2.jpg" ></image></navigator></view>
+<view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_1.jpg"></image></navigator></view>
+<view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaleToFill" src="../../images/CanteenPicture/canteen_2.jpg" ></image></navigator></view>
 
-<view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/cateen3.jpg" ></image></navigator></view>
+<view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_3.jpg" ></image></navigator></view>
 
-<view class='four'><navigator url="/pages/canteen_four/canteen_four">four</navigator></view>
+<view class='four'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_4.jpg" ></image></navigator></view>
 </view>
 <scroll-view scroll-x>
   <view class="srcout">
 <view class='srcbox'>
+  
+<view>今日美食推荐</view>
 <navigator ><image>
 
 
