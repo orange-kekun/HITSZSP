@@ -17,9 +17,9 @@
        <!-- 右侧的滚动scroll-view -->
     <scroll-view class="srcright" enable-flex scroll-y="true" style="height:1334rpx">
 
-    <block wx:for="{{items[curindex].dangkou.meal}}" wx:key="value">
+    <block wx:for="{{items[curindex].dangkou.meal}}" wx:key="value" >
        <!-- 档口的一个菜品 -->
-      <navigator url="../details/details">
+      <navigator url="../details_2/details_2?dangkou_id={{items[curindex]._id}}&&meal_id={{index}}">
         <view class="nav_right_items">
         <!-- 左部分为图片 -->
           <view class="image">

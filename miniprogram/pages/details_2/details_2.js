@@ -1,17 +1,43 @@
 // pages/details/details.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+      items:{},
+      meal_id:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    const db=wx.cloud.database()
+    const _=db.command
+    var meal_id = options.meal_id;
+    this.setData({
+      meal_id:meal_id
+    })
+    console.log("接受的数据",options)
+    wx.cloud.database().collection("canteen2")
+    .doc(options.dangkou_id)
+    .get()
+    .then(res=>{
+      console.log("sucess",res)
+      this.setData({
+        items:res.data
+      })
+    })
+    .catch(res=>{
+      console.log("failed",res)
+    })
+ 
+    
+
+ 
+
 
   },
 
