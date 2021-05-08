@@ -11,9 +11,9 @@
 }
 .srcbox
 {
-  width: 200rpx;
-  height: 800rpx;
-  background-color: rgb(19, 238, 48);
+  width: 100rpx;
+  height: 400rpx;
+  background-color: white;
   flex:0 0 500rpx;
   margin-right: 20rpx;
   border-radius: 60rpx;
@@ -29,38 +29,38 @@ justify-content: space-evenly;
 .one{
   width: 180rpx;
   height: 200rpx;
-  background-color: rgb(238, 16, 16);
+  background-color: rgb(238, 123, 16);
   border-radius: 5px;
 }
 .two
 {
   width: 180rpx;
   height: 200rpx;
-  background-color: rgb(238, 16, 16);
+  background-color: rgb(238, 123, 16);
   border-radius: 5px;
 }
 .three
 {
   width: 180rpx;
   height: 200rpx;
-  background-color: rgb(238, 16, 16);
+  background-color: rgb(238, 123, 16);
   border-radius: 5px;
 }
 .four{
   width: 180rpx;
   height: 200rpx;
-  background-color: rgb(238, 16, 16);
+  background-color: rgb(238, 123, 16);
   border-radius: 5px;
 }
 .s-one
 {
-  background-color: rgb(19, 194, 77);
+  background-color: rgb(238, 123, 16);
   border-radius: 20rpx;
   
 }
 .s-two
 {
-  background-color: rgb(11, 129, 226);
+  background-color: rgb(238, 123, 16);
   border-radius: 20rpx;
  
  
@@ -71,22 +71,34 @@ justify-content: space-evenly;
   border-radius: 20rpx;
 
 }
+
+.s-four
+{
+  background-color: #f36a0e;
+  border-radius: 20rpx;
+
+}
 .s-box
 {
   margin: 20rpx;
-  width: 100%;
-  height: 700rpx;
+  width: 1010rpx;
+  height: 550rpx;
 
 }
 .s-box image{
-  height: 100%;
+  
+  width: 730rpx;
 
 }
 .s-box swiper-item
 {
-  padding-left: 10rpx;
+  padding-left: 0rpx;
 }
 .sort image{
   width: 180rpx;
   height: 200rpx;
+}
+page
+{
+  background:#FE8848;
 }
