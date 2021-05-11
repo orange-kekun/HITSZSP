@@ -47,9 +47,16 @@
 
 按地域分：例家乡菜  
 
+dongbei,sichuan,hunan,guangdong,
+
 按食堂分：1234（包含营业时间）  
- 
+
+按早中晚分:
+morning,noon,afternoon
+
 按口味分：甜咸辣酸 清淡  
+
+sweet,salt,spicy,sour,light
 
 #### 2.每道菜信息
 
@@ -70,3 +77,6 @@
 从哪获得每道菜图片？大众点评 网图 自己拍  
 
 this is ma yi testing
+
+
+

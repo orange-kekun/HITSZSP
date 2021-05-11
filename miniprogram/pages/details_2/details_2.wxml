@@ -1,0 +1,3 @@
+<!--pages/details/details.wxml-->
+<text>pages/details/details22222.wxml</text>
+<view>1111111111{{meal_id}}</view>

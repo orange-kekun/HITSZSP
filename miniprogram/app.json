@@ -1,7 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/details/details",
+    "pages/details_1/details_1",
+    "pages/details_2/details_2",
+    "pages/details_3/details_3",
     "pages/search/search",
     "pages/mine/mine",
     "pages/canteen_one/canteen_one",
@@ -9,9 +11,7 @@
     "pages/canteen_two/canteen_two",
     "pages/aboutme/aboutme",
     "pages/mycollect/mycollect",
-    "pages/mycomment/mycomment",
-    "pages/dishes/dish_3001_1/dish_3001_1"
-
+    "pages/mycomment/mycomment"
   ],
   "window": {
     "backgroundColor": "#FE8848",
@@ -33,8 +33,8 @@
       {
         "pagePath": "pages/search/search",
         "text": "搜索",
-        "iconPath": "images_/shipu_1.png",
-        "selectedIconPath": "images_/shipu_2.png"
+        "iconPath": "images_/search_1.png",
+        "selectedIconPath": "images_/search_2.png"
       },
       {
         "pagePath": "pages/mine/mine",
