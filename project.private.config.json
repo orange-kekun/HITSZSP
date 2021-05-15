@@ -29,6 +29,17 @@
           "pathName": "pages/canteen_two/canteen_two",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/details_2/details_2",
+          "pathName": "pages/details_2/details_2",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/mycollect/mycollect",
+          "pathName": "pages/mycollect/mycollect",
+          "scene": null
         }
       ]
     }

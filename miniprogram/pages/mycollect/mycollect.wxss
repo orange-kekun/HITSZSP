@@ -1,1 +1,8 @@
 /* pages/mycollect/mycollect.wxss */
+.fenxiang button::after{border: none;}
+.fxbtn{background: none;border:none;margin:0px;padding:0px;border-radius: 0px;font-size: 12px;}
+.fximage{  width: 40rpx;
+  height: 40rpx;
+padding: 0rpx
+;}
+.fenxiang{line-height: 1px;float:right;}
