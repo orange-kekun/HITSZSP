@@ -21,7 +21,7 @@
        <!-- 档口的一个菜品 -->
       <view class="nav_right_items">
        <!-- 左部分为图片 -->
-       <navigator >
+       <navigator url="../details_4/details_4?dangkou_id={{items[curindex]._id}}&&meal_id={{index}}">
            <image src="{{item.picture}}"></image>
          </navigator>
          <!-- 右部分为文字 -->

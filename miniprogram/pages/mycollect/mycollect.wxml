@@ -1,2 +1,7 @@
 <!--pages/mycollect/mycollect.wxml-->
-<text>pages/mycollect/mycollect.wxml</text>
+<view class='fenxiang'>
+      <button class="fxbtn" open-type="share" >
+        <view style='height:20px;margin-top:8px;'><image src='../../images/details_icon/fenxiang.png' class='fximage'></image></view>
+        <view>分享</view>
+     </button>
+  </view>
