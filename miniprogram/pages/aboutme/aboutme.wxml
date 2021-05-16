@@ -1,6 +1,6 @@
 <!--pages/aboutme/aboutme.wxml-->
 <view class="pagecolor">
-<image src="../../images/aboutme.jpg" mode="widthFix" class='backimage' >
+<image src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/logo_mh1615911719277.jpg?sign=b828a3c2bf9042026d632adcf763a3d6&t=1620567865" mode="widthFix" class='backimage' >
 </image>   
 
 <text class="line">
