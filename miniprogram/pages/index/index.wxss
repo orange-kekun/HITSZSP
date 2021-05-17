@@ -27,8 +27,8 @@ justify-content: space-evenly;
 
 }
 .one{
-  width: 180rpx;
-  height: 200rpx;
+  width: 100%;
+  height: 100%;
   background-color: rgb(238, 123, 16);
   border-radius: 5px;
 }
@@ -100,5 +100,5 @@ justify-content: space-evenly;
 }
 page
 {
-  background:#FE8848;
+  background:#FFFFFF;
 }

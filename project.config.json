@@ -6,19 +6,14 @@
     "scopeDataCheck": false,
     "coverView": true,
     "es6": true,
-
     "postcss": true,
     "compileHotReLoad": false,
     "preloadBackgroundData": false,
     "minified": true,
-
-
     "autoAudits": false,
     "newFeature": false,
     "uglifyFileName": false,
     "uploadWithSourceMap": true,
-
-
     "useIsolateContext": true,
     "nodeModules": false,
     "enhance": false,
