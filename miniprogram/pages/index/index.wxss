@@ -4,7 +4,7 @@
 }
 .srcout
 {
-  height: 800rpx;
+  height: 100%rpx;
   display:flex;
   flex-wrap: nowrap;
   align-items: flex-start;
@@ -13,9 +13,8 @@
 {
   width: 100rpx;
   height: 400rpx;
-  background-color: white;
+  background-color:orange;
   flex:0 0 500rpx;
-  margin-right: 20rpx;
   border-radius: 60rpx;
 }
 .sort{
@@ -27,8 +26,8 @@ justify-content: space-evenly;
 
 }
 .one{
-  width: 100%;
-  height: 100%;
+  width: 180rpx;
+  height: 200rpx;
   background-color: rgb(238, 123, 16);
   border-radius: 5px;
 }
@@ -80,14 +79,14 @@ justify-content: space-evenly;
 }
 .s-box
 {
-  margin: 20rpx;
-  width: 1010rpx;
-  height: 550rpx;
+  margin: 0rpx;
+  width: 100%rpx;
+  height: rpx;
 
 }
 .s-box image{
   
-  width: 730rpx;
+  width: 750rpx;
 
 }
 .s-box swiper-item
@@ -101,4 +100,46 @@ justify-content: space-evenly;
 page
 {
   background:#FFFFFF;
+}
+
+.tip1{
+  font-size: larger;
+  font-style: inherit;
+  align-content: center;
+  justify-items: center;
+  
+}
+.blankline{
+  height: 50rpx;
+  width: 750rpx;
+  background: white;
+}
+
+.blankline2{
+  height: 15rpx;
+  width: 100%;
+  background: white;
+}
+.divline{
+  height: 5rpx;
+  width: 100%;
+  background: grey;
+}
+.random{
+  height:500rpx;
+  width: 100%;
+}
+.ranbutton {
+  margin-top: 100px;
+  width: 300px;
+  border-radius: 30px;
+  background:orange;
+  color: white;
+  padding: 0rpx 100rpx;
+}
+.tip2{
+  font-size: larger;
+}
+.tip3{
+  font-size: larger;
 }

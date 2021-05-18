@@ -1,85 +1,115 @@
 <search></search>
 
-
-<swiper  class='s-box'autoplay="true" circular="true"   next-margin="120px">
+<swiper  class='s-box'autoplay="true" circular="true"   next-margin="0">
 <swiper-item class='s-one'>
-  <image  mode="scaleToFill"  src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_1.jpg?sign=87e9b0a2a203eb348945ed5a1f291737&t=1620573530" ></image>
+  <image  mode="aspectFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_1.jpg" ></image>
 </swiper-item>
-
 
 
 
 <swiper-item class='s-two'>
-  <image   mode="scaleToFill" src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_2.jpg?sign=24329a10c4fb58fb178d06629a58d953&t=1620573584" ></image>
+  <image   mode="aspectFill" src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_2.jpg" ></image>
 </swiper-item>
-
 
 
 
 <swiper-item class='s-three'>
-  <image  mode="scaleToFill"  src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_3.jpg?sign=1754a42f9827f3161327065e8b90b238&t=1620573595" ></image>
+  <image  mode="aspectFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_3.jpg" ></image>
 </swiper-item>
-
 
 
 <swiper-item class='s-four'>
-  <image  mode="scaleToFill"  src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_4.jpg?sign=6b55e761c6adc285bab5f371ea4f2d5e&t=1620573611" ></image>
+  <image  mode="aspectFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_4.jpg" ></image>
 </swiper-item>
 
 
-
 </swiper>
-
-
-
-
-
-
-
-
+<view class='divline'></view>
+<view class='blankline'></view>
+<view class='tip1'>点击下方数字进入食堂</view>
+<view class='blankline2'></view>
 
 
 <view class='sort'> 
-<view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_1.jpg?sign=112ab36b99abbd6b0966494e647e7aa4&t=1620573677"></image></navigator></view>
-<view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaleToFill" src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_2.jpg?sign=2d0ce18ad473514257b18278add13a10&t=1620573699" ></image></navigator></view>
+<view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_1.jpg"></image></navigator></view>
+<view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaleToFill" src="../../images/CanteenPicture/canteen_2.jpg" ></image></navigator></view>
 
-<view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_3.jpg?sign=1754a42f9827f3161327065e8b90b238&t=1620573595" ></image></navigator></view>
+<view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_3.jpg" ></image></navigator></view>
 
-<view class='four'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="https://6869-hitsz-recipe-formal-1cosd953108c-1304092686.tcb.qcloud.la/canteen_4.jpg?sign=6b55e761c6adc285bab5f371ea4f2d5e&t=1620573611" ></image></navigator></view>
+<view class='four'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_4.jpg" ></image></navigator></view>
 </view>
+<view class='blankline'></view>
+<view class='divline'></view>
+<view class='blankline'></view>
+<view class='tip2'>近日上新</view>
+<view class='blankline'></view>
 <scroll-view scroll-x>
   <view class="srcout">
 <view class='srcbox'>
   
-<view>今日美食推荐</view>
+
 <navigator ><image>
 
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
 
 </image></navigator>
 </view>
 <view class='srcbox'>
   <navigator ><image>
 
-
 </image></navigator>
 </view>
 <view class='srcbox'>
   <navigator ><image>
 
-
 </image></navigator>
 </view>
 <view class='srcbox'>
   <navigator ><image>
-
-
-</image></navigator>
-</view>
-<view class='srcbox'>
-  <navigator ><image>
-
 
 </image></navigator>
 </view>
 </view>
 </scroll-view>
+<view class='blankline'></view>
+<view class='divline'></view>
+<view class='blankline'></view>
+<view class='tip3'>人气推荐</view>
+<view class='blankline'></view>
+<scroll-view scroll-x>
+  <view class="srcout">
+<view class='srcbox'>
+  
+
+<navigator ><image>
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+
+</image></navigator>
+</view>
+<view class='srcbox'>
+  <navigator ><image>
+</image></navigator>
+</view>
+</view>
+</scroll-view>
+<view class='blankline'></view>
+<view class='divline'></view>
+<view class='random'></view>
+<button class='ranbutton'>点击测试今日食物</button>
