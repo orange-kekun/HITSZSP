@@ -31,17 +31,17 @@
 
 
 <view class='sort'> 
-<view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_1.jpg"></image></navigator></view>
-<view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaleToFill" src="../../images/CanteenPicture/canteen_2.jpg" ></image></navigator></view>
+<view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/1.png"></image></navigator></view>
+<view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaletofill" src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/2.png" ></image></navigator></view>
 
-<view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_3.jpg" ></image></navigator></view>
+<view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/3.png" ></image></navigator></view>
 
-<view class='four'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="../../images/CanteenPicture/canteen_4.jpg" ></image></navigator></view>
+<view class='four'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/4.png" ></image></navigator></view>
 </view>
 <view class='blankline'></view>
 <view class='divline'></view>
 <view class='blankline'></view>
-<view class='tip2'>近日上新</view>
+<view class='tip2'>近日上新<image class='new' src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/new(1).png"></image></view>
 <view class='blankline'></view>
 <scroll-view scroll-x>
   <view class="srcout">
@@ -77,7 +77,7 @@
 <view class='blankline'></view>
 <view class='divline'></view>
 <view class='blankline'></view>
-<view class='tip3'>人气推荐</view>
+<view class='tip3'>人气推荐<image class='hot' src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/hot (1)(1).png"></image></view>
 <view class='blankline'></view>
 <scroll-view scroll-x>
   <view class="srcout">

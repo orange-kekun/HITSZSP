@@ -143,3 +143,11 @@ page
 .tip3{
   font-size: larger;
 }
+.new{
+  width: 100rpx;
+  height: 50rpx;
+}
+.hot{
+  width: 100rpx;
+  height: 50rpx;
+}
