@@ -4,7 +4,7 @@
 }
 .srcout
 {
-  height: 800rpx;
+  height: 100%rpx;
   display:flex;
   flex-wrap: nowrap;
   align-items: flex-start;
@@ -13,10 +13,10 @@
 {
   width: 100rpx;
   height: 400rpx;
-  background-color: white;
+  background-color:orange;
   flex:0 0 500rpx;
-  margin-right: 20rpx;
   border-radius: 60rpx;
+  margin-top:10rpx;
 }
 .sort{
   width: 100%;
@@ -80,14 +80,15 @@ justify-content: space-evenly;
 }
 .s-box
 {
-  margin: 20rpx;
-  width: 1010rpx;
-  height: 550rpx;
+
+  margin:10rpx 5rpx ;
+  width: 100%rpx;
+  height: 350rpx;
 
 }
 .s-box image{
   
-  width: 730rpx;
+  width: 750rpx;
 
 }
 .s-box swiper-item
@@ -98,7 +99,44 @@ justify-content: space-evenly;
   width: 180rpx;
   height: 200rpx;
 }
-page
-{
-  background:#FE8848;
+.pagecolor{
+  min-height: 100vh;
+  background-color:#f4f5f6;
+}
+.random{
+  height:500rpx;
+  width: 100%;
+}
+.ranbutton {
+  margin-top: 100px;
+  width: 300px;
+  border-radius: 30px;
+  background:orange;
+  color: white;
+  padding: 0rpx 100rpx;
+}
+.tip{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80rpx;
+    font-weight: 500;
+}
+.index_icon{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.allbox{
+  border: 3rpx solid white;
+  background-color: white;
+ border-radius: 30rpx;
+   padding: 10rpx;
+   margin:20rpx 10rpx;
+}
+.div-line{
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+
 }
