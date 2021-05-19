@@ -1,2 +1,2 @@
 <view class="searchinput">
-<navigator url="/pages/search/search" open-type="switchTab">搜索校园健康菜谱</navigator></view>
+<navigator url="/pages/search/search" open-type="switchTab">搜一搜发现美味</navigator></view>
