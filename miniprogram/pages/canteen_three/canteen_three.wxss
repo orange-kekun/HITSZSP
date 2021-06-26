@@ -21,8 +21,8 @@ page{
 }  
 /*左侧栏list的item*/  
 .nav_left .nav_left_items{  
-  /*每个高30px*/  
-  height: 90rpx;  
+  /*每个高30px*/ /*尝试调成130rpx*/ 
+  height: 130rpx;  
   /*垂直居中*/  
   line-height: 80rpx;  
   /*再设上下padding增加高度，总高42px*/  
@@ -38,7 +38,7 @@ page{
   background: #fff;  
   color: #FE8848; 
    /*每个高30px*/  
-   height: 90rpx;  
+   height: 130rpx;  
    /*垂直居中*/  
    line-height: 80rpx;  
    /*再设上下padding增加高度，总高42px*/  
