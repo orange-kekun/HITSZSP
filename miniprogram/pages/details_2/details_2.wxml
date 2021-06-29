@@ -10,7 +10,7 @@
   <view class='mealname'>{{items.dangkou.meal[meal_id].meal_name}} </view>
   <view class='fenxiang'>
       <button class="fxbtn" style="width:100% height:100%" open-type="share" >
-        <view style='height:20px;margin-top:8px;'><image src='../../images/details_icon/fenxiang.png' class="fximage"></image></view>
+        <view style='height:20px;margin-top:8px;'><image src='../../images/details_icon/fenxiang.png' class="fximage" ></image></view>
      </button>
   </view>
 </view>
