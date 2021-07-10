@@ -20,11 +20,13 @@ page{
   text-align: center;  
 }  
 /*左侧栏list的item*/  
-.nav_left .nav_left_items{  
+.nav_left .nav_left_items{ 
+  /* 文字居中 */
+  display: flex;
+  align-items: center;
+  justify-content: center; 
   /*每个高30px*/  /*尝试直接调高一点*/
-  height: 130rpx;  
-  /*垂直居中*/  
-  line-height: 80rpx;  
+  height: 130rpx;   
   /*再设上下padding增加高度，总高42px*/  
   padding: 12rpx 0;  
   /*只设下边线*/  
