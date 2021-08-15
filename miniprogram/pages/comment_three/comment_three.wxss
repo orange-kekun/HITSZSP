@@ -1,0 +1,16 @@
+.input{
+  border:solid 5rpx gainsboro;
+  margin-top:  100rpx;
+  margin-bottom: 60rpx;
+}
+.tupian
+{
+width: 100rpx;
+height: 100rpx;
+border-radius:50%;
+}
+.box
+{
+  display: flex;
+  justify-content:flex-start;
+}

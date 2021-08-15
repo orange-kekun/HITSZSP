@@ -37,7 +37,8 @@
         <image src="../../images/details_icon/jt.png" class="ico_img_jt"></image>
      </view>
      <view style='float:right;font-size:12px;color:#A2A2A2;'>
-        <navigator url="pjList?id={{goods_id}}">查看全部</navigator>
+     <!-- 链接的同时给评论页传递参数，d_id表示档口id,id表示菜品id -->
+        <navigator url="../comment_three/comment_three?id={{meal_id}}&&d_id={{dangkou_id}}">查看全部</navigator>
      </view>
      <view class='clear'></view>
     </view>
