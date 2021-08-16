@@ -37,7 +37,7 @@
         <image src="../../images/details_icon/jt.png" class="ico_img_jt"></image>
      </view>
      <view style='float:right;font-size:12px;color:#A2A2A2;'>
-        <navigator url="pjList?id={{goods_id}}">查看全部</navigator>
+        <navigator url="../comment_one">查看全部</navigator>
      </view>
      <view class='clear'></view>
     </view>

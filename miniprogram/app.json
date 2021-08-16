@@ -11,7 +11,9 @@
     "pages/canteen_two/canteen_two",
     "pages/aboutme/aboutme",
     "pages/mycollect/mycollect",
-    "pages/mycomment/mycomment"
+    "pages/mycomment/mycomment",
+    "pages/comment_one/comment_one",
+    "pages/comment_three/comment_three"
   ],
   "window": {
     "backgroundColor": "#FE8848",

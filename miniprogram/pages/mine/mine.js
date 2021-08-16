@@ -51,6 +51,7 @@ Page({
   setUserInfo: function (userInfo) {
     if (userInfo != null) {
       app.globalData.userInfo = userInfo
+      wx.setStorageSync('user', userInfo)//缓存用户信息，用于检验用户是否授权登录
       this.setData({
         userInfo: userInfo,
         hasUserInfo: true
