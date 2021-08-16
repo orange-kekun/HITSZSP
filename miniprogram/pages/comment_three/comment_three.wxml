@@ -1,0 +1,25 @@
+<!-- 上方是历史评价信息 -->
+<block wx:for="{{pinglun}}" wx:key='index'>
+<!-- 展示评论者的微信头像和名称 -->
+<!-- <view wx:if="{{item.name=''}}"><text>暂无评论</text></view> -->
+
+<!-- <view wx:else > -->
+<view class='box'>
+<image class='tupian' src="{{item.image}}"></image>
+<text >
+{{item.name}}:
+</text>
+</view>
+<text>
+{{item.content}}
+</text>
+<!-- </view> -->
+
+
+
+</block>
+<!-- 发表评论 -->
+<input class='input' type="text" placeholder="说点什么吧" bindinput="getContent" value='{{content}}'>
+</input>
+<button type="primary" bindtap="fabiao">发表评论
+</button>
