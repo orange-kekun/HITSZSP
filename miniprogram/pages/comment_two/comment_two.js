@@ -10,7 +10,7 @@ Page({
    */
   data: {
     pinglun:[],
-    content:''
+    content:'',
   },
   /**
    * 生命周期函数--监听页面加载
@@ -37,7 +37,7 @@ Page({
         }
       })
     }
-    wx.cloud.database().collection("canteen1")
+    wx.cloud.database().collection("canteen2")
     .doc(options.d_id)
     .get()
     .then(res=>{
@@ -88,7 +88,7 @@ Page({
         name:'pj',
         data:
         {
-        canteen:'canteen1',
+        canteen:'canteen2',
         dangkou:d_id,
         meal_id:meal_id,
         pj:pinglunArr,
