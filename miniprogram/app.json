@@ -13,7 +13,8 @@
     "pages/mycollect/mycollect",
     "pages/mycomment/mycomment",
     "pages/comment_one/comment_one",
-    "pages/comment_three/comment_three"
+    "pages/comment_three/comment_three",
+    "pages/comment_two/comment_two"
   ],
   "window": {
     "backgroundColor": "#FE8848",
