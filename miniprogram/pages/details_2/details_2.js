@@ -11,7 +11,8 @@ Page({
       indicatorDots: true,
       autoplay: true,
       interval: 5000,
-      duration: 1000
+      duration: 1000,
+      dangkou_id:'',
   },
   
   /**
@@ -20,10 +21,12 @@ Page({
   onLoad: function (options) {
     const db=wx.cloud.database()
     const _=db.command
-    var meal_id = options.meal_id;
+    var meal_id = options.meal_id
+    var dangkou_id=options.dangkou_id
   //接受页面传递数据
     this.setData({
-      meal_id:meal_id
+      meal_id:meal_id,
+      dangkou_id:dangkou_id
     })
     console.log("接受的数据",options)
     wx.cloud.database().collection("canteen2")

@@ -1,4 +1,5 @@
 <!-- 上方是历史评价信息 -->
+
 <block wx:for="{{pinglun}}" wx:key='index'>
 <!-- 展示评论者的微信头像和名称 -->
 <!-- <view wx:if="{{item.name=''}}"><text>暂无评论</text></view> -->

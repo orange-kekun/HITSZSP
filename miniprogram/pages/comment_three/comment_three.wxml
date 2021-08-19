@@ -7,7 +7,7 @@
 <view class='box'>
 <image class='tupian' src="{{item.image}}"></image>
 <text >
-{{item.name}}:
+{{item.name}}
 </text>
 </view>
 <text>
