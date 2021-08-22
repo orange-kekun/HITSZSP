@@ -14,7 +14,14 @@
     "pages/mycomment/mycomment",
     "pages/comment_one/comment_one",
     "pages/comment_three/comment_three",
+<<<<<<< HEAD
     "pages/comment_two/comment_two"
+=======
+    "pages/searchShow",
+    "pages/searchShow/seaarchShow",
+    "pages/comment_two/comment_two",
+    "pages/details/details"
+>>>>>>> d8a683995664db78ed4fbac51221f21470d081ac
   ],
   "window": {
     "backgroundColor": "#FE8848",
