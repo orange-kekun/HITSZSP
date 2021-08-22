@@ -5,16 +5,26 @@
             <!-- 最初始时的搜索框 -->
                 <view class="weui-search-bar__box">
                     <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                    <input type="text" class="weui-search-bar__input" placeholder="搜索"/>
+                    <input type="text" class="weui-search-bar__input" v-model="{{inputVal}}" bindblur='changeSearch' bindconfirm='changeSearch' bindinput='changeSearch' placeholder="搜索"/>
                 </view>
                 <!-- 可编辑时的搜索框 -->
-                <label class="weui-search-bar__label" hidden="{{inputShowed}}" bindtap="showInput">
+                <!-- <label class="weui-search-bar__label"  bindtap="showInput">
                     <icon class="weui-icon-search" type="search" size="14"></icon>
                     <view class="weui-search-bar__text">搜索</view>
-                </label>
+                </label> -->
             </view>
             <!-- 取消搜索 -->
-            <view class="weui-search-bar__cancel-btn" hidden="{{!inputShowed}}" bindtap="hideInput">取消</view>
+            <view class="weui-search-bar__cancel-btn" bindtap="showInput">搜索</view>
         </view>
+    </view>
+    <view wx:for="{{search_list1}}" wx:key="index" data-item="{{item}}" class="items"  data-key="item" bindtap="toAppendFiduciary">
+        <view class="left">
+            <!-- <image data-dialog="dialogSearchType" bindtap="showDialog" src="{{iconSelector}}"></image> -->
+            <image src="{{item.dangkou.meal[0].picture}}"></image>
+        </view>
+        <view class="right">
+            {{item.dangkou.dangkou_name}}
+        </view>
+        <!-- <view>{{item.dangkou.dangkou_name}}</view> -->
     </view>
 </view>

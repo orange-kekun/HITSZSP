@@ -16,7 +16,8 @@
     "pages/comment_three/comment_three",
     "pages/searchShow",
     "pages/searchShow/seaarchShow",
-    "pages/comment_two/comment_two"
+    "pages/comment_two/comment_two",
+    "pages/details/details"
   ],
   "window": {
     "backgroundColor": "#FE8848",
