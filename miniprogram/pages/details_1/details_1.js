@@ -1,11 +1,18 @@
 // pages/details/details.js
-
+const db=wx.cloud.database()
+const _=db.command
+const mealsCollection = db.collection('canteen1')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    newsList: [], //列表数据
+    iscard: [], //打过卡的id集合
+    daka_people: [], //每个列表数据的打卡的用户集合
+    
+    openid: '',
       items:'',
       meal_id:'',
       indicatorDots: true,
@@ -19,8 +26,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const db=wx.cloud.database()
-    const _=db.command
+ 
     var meal_id = options.meal_id
     var dangkou_id=options.dangkou_id
   //接受页面传递数据
@@ -41,38 +47,137 @@ Page({
     .catch(res=>{
       console.log("failed",res)
     })
+    let that = this;
+    wx.cloud.callFunction({
+      name: 'getOpenid',
+      complete: res => { // 获取用户openid
+       console.log('云函数获取到的openid: ', res.result.openid)
+       that.setData({
+          openid: res.result.openid
+       })
+    
+       wx.cloud.database().collection("canteen1")
+       .doc(options.dangkou_id)
+       .get()
+       .then(res=>{
+         console.log("sucess",res)
+        that.setData({
+           newsList:res.data.dangkou.meal
+         })
+         
+         var iscard = that.data.iscard;
+         
+           for (var i = 0; i < res.data.dangkou.meal.length; i++) { //数据获取成功后，进行遍历，拿到所有已经打过卡的菜品id
+           
+            for (let j = 0; j < res.data.dangkou.meal[i].daka_people.length; j++) {
+               if (res.data.dangkou.meal[i].daka_people[j] == that.data.openid) { 
+                 iscard.push(res.data.dangkou.meal[i].meal_name) //根据该用户的数据找到已经打卡的，把菜品id放入新建数组中
+               }
+              }
+            }
+           for (let i = 0; i < res.data.dangkou.meal.length; i++) {
+             res.data.dangkou.meal[i].daka = false
+             for (let j = 0; j < iscard.length; j++) { //利用新建的iscard数组与list数组的id查找相同的菜品id
+                if (res.data.dangkou.meal[i].name == iscard[j]) { //双重循环遍历，有相同的id则为打卡成功
+                 res.data.dangkou.meal[i].daka = true
+                }
+             }
+            }
+           console.log(res.data)
+           that.setData({
+             iscard: this.data.iscard,
+             newsList: res.data.dangkou.meal
+            })
+            console.log('newslist的数据',that.data.newsList)
+           wx.setStorageSync('card', iscard);
+      
+         })
+       .catch(res=>{
+          console.log("failed",res)
+       })
+      }
+    })
+   },
 
-
-//     var postId = option.id;//要先在对应的数据文本中对每个栏目定义postId、比如postId: 0 postId:1
-//     this.data.currentPostId = postId; //借助顶部data作为中转，拿到上面这行postid后，将它放到下面var postCollected = postsCollected[]中        //将这个postId从onLoad中传递到下面的onCollectionTap中
-//          var postData = postsData.postList[postId];//定义每个新闻列表对应顺序是哪个新闻内容
-//  //用户收藏功能
-//     var postsCollected = wx.getStorageSync('posts_collected') //从缓存中读取所有的缓存状态
-//      if (postsCollected) {   //postsCollected为真的情况，在缓存中存在
-//          var postCollected = postsCollected[postId]//读取其中一个缓存状态
-//          this.setData({
-//              collected: postCollected //将是否被收藏的状态上绑定到collected这个变量上
-//          })
-//      }
-//      else {       //为假的情况，缓存中为空的情况
-//          var postsCollected = { }; //对postsCollected进行一个赋值操作，从而防止为空，从而省掉后面对它是否为空进行测试的步骤
-//          postsCollected[postId] = false; // 让当前的状态为false，从而收藏星星不点亮
-//          wx.setStorageSync('posts_collected', postsCollected);//将postsCollected对象放到缓存中
-//      }
-//  },
-//  onCollectionTap: function (event) {　　　　// 定义onCollectionTap事件用来确定是否收藏，如果没收藏就能点亮星星进行收藏
-//      var postsCollected = wx.getStorageSync('posts_collected');   //获取缓存的方法
-//      var postCollected = postsCollected[this.data.currentPostId];   //确定当前是否有缓存的状态，传递参数方法、借助其他参数来传递变量，如上的data
-//      postCollected = !postCollected;// 取反操作，收藏变成未收藏、未收藏变为收藏
-//      postsCollected[this.data.currentPostId] = postCollected;//整体缓存的某一菜的缓存值等于postCollected从而更新一个变量
-//      wx.setStorageSync('posts_collected', postsCollected);//更新是否收藏的缓存值,相当于在数据库中做了一次更新。
-//      //更新Data的数据绑定变量,从而实现图片切换
-//      this.setData({
-//          collected: postCollected //当前的collected为postCollected
-//      })
+ // 打卡函数  获取对应id
+thumbsup: function (e) {
+  var shareid = e.currentTarget.dataset.id;
+  console.log(shareid)
+  this.card(shareid);
 },
-
-
+ //打卡处理函数    
+ card: function (mealname) {
+ 
+  var that = this;
+  var cookie_id = wx.getStorageSync('card') || [];
+  console.log(cookie_id) //获取全部打卡的id
+  var openid = that.data.openid
+  console.log(openid)
+  for (var i = 0; i < that.data.newsList.length; i++) {
+    if (that.data.newsList[i].meal_name == mealname) { //数据列表中找到对应的id
+      var num = that.data.newsList[i].daka_num; //当前打卡数
+      if (cookie_id.includes(mealname) ) { //已经打过卡了，取消打卡
+        for (var j in cookie_id) {
+          if (cookie_id[j] == mealname) {
+            cookie_id.splice(j, 1); //删除取消打卡的id
+          }
+        }
+        --num; //打卡数减1
+        that.setData({
+          [`items.dangkou.meal[${i}.].daka_num`]: num,
+          [`newsList[${i}].daka_num`]: num, //es6模板语法，常规写法报错
+          [`newsList[${i}.].daka`]: false ,//我的数据中daka为'false'是未打卡
+          [`items.dangkou.meal[${i}.].daka`]:false
+        })
+        wx.setStorageSync('card', cookie_id);
+        wx.showToast({
+          title: "取消打卡",
+          icon:'none'
+        })
+        this.data.newsList[i].daka_people.pop(openid)
+      } else { //打卡操作
+        ++num; //打卡数加1
+        that.setData({
+          [`newsList[${i}].daka_num`]: num,
+          [`items.dangkou.meal[${i}.].daka_num`]: num,
+          [`newsList[${i}.].daka`]: true,
+          [`items.dangkou.meal[${i}.].daka`]:true
+        })
+        
+        cookie_id.unshift(mealname); //新增被打卡的菜名
+        wx.setStorageSync('card', cookie_id);
+        wx.showToast({
+          title: "第"+that.data.items.dangkou.meal[i].daka_num+'人打卡',
+          icon:'success'
+        })
+        this.data.newsList[i].daka_people.push(openid)
+        console.log(this.data.newsList[i].daka_people)
+      }
+      //和后台交互，后台数据要同步
+      var dangkou__id=that.data.dangkou_id
+      var meal__id=that.data.meal_id
+      var dangkou__id=that.data.dangkou_id
+      var meal__id=that.data.meal_id
+      console.log(this.data.newsList)
+      wx.cloud.callFunction(
+        {
+          name:'daka',
+          data:
+          {
+          canteen:'canteen1',
+          dangkou:dangkou__id,
+          meal_id:meal__id,
+          daka_people:this.data.newsList[i].daka_people,
+          daka:this.data.newsList[i].daka,
+          daka_num:num
+          }
+        }
+      )
+  
+        
+    }
+  }
+},
 
   /**
    * 生命周期函数--监听页面初次渲染完成

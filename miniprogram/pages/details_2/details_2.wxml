@@ -89,7 +89,8 @@
         </view>
    </view>
     <view class="add-cart sub f16">
-      <button class="add-cart-btn" bindtap='daka'>打卡</button>
+      <button class="add-cart-btn" hover-class='add-cart-btn1' bindtap='thumbsup'  data-id='{{items.dangkou.meal[meal_id].meal_name}}' wx:if="{{!items.dangkou.meal[meal_id].daka}}">打卡 </button>
+      <button class="add-cart-btn_active" hover-class='add-cart-btn1_active' bindtap='thumbsup'  data-id='{{items.dangkou.meal[meal_id].meal_name}}' wx:else>已打卡√</button>      
     </view>
   </view>
 </view>
