@@ -1,4 +1,4 @@
-/* pages/details/details.wxss */
+/* pages/details_2/details_2.wxss *//* pages/details/details.wxss */
 .clear{clear: both;overflow: hidden;}
 .banner{height:300px;}
 .slide-image {width:100%;height:100%;}
@@ -47,8 +47,28 @@
 .notempty{ position: relative;}
 .notempty::after{ content:""; display: block; width: 9px; height: 9px; border: 1px solid #fff; border-radius: 50%; background: #e64340; position: absolute; top:5px; right: 50%; margin-right: -16px;}
  
-.add-cart .add-cart-btn{background:linear-gradient(to right,#FCCF31, #F55555);color: #fff;border-radius: 50px; padding:0px;width:150px;height:35px; line-height: 35px;margin-top:5px;margin-right:15px;}
-.kefu button{border:none;background:none;display:block;padding:0px;margin:0px;line-height:1.5em;font-size:inherit;}
+.add-cart .add-cart-btn{
+  transition: width 0.4s ;
+  -webkit-transition: width 0.4s;
+  background:linear-gradient(to left,#FCCF31, #F55555);color: #fff;border-radius: 50px; padding:0px;width:150px;height:35px; line-height: 35px;margin-top:5px;margin-right:15px;}
+.add-cart .add-cart-btn1{   /* 点击效果 */
+  box-shadow:0px 0px 20px rgba(153, 153, 153, 0.781) inset;
+  margin-top:6px
+}
+.add-cart .add-cart-btn_active{
+  transition: width 0.4s ;
+  -webkit-transition: width 0.4s;
+  background: #fe8848;color: #fff;border-radius: 50px; padding:0px;width:150px;height:35px; line-height: 35px;margin-top:5px;margin-right:15px;}
+.add-cart .add-cart-btn1_active{   /* 打卡后点击效果 */
+  box-shadow:0px 0px 20px rgba(153, 153, 153, 0.781) inset;
+  margin-top:6px
+}
+
+
+/* .add-cart .add-cart-btn{background:linear-gradient(to right,#FCCF31, #F55555);
+  color:transparent ; -webkit-background-clip: text;background-clip: text;
+  border-radius: 50px;border-color:linear-gradient(to right,#FCCF31, #F55555) ; padding:0px;width:150px;height:35px; line-height: 35px;margin-top:5px;margin-right:15px;} */
+  .kefu button{border:none;background:none;display:block;padding:0px;margin:0px;line-height:1.5em;font-size:inherit;}
 .kefu button::after{border: none;}
 .kefu .button-hover{color:#333; background:none;}
 .kefu button .iconfont{ padding:0px;}
