@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#FE8848",
+  "navigationBarTitleText": "评价",
+  "navigationBarTextStyle": "white"
 }

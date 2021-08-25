@@ -9,8 +9,8 @@
 <view class="info-mealname clear">
   <view class='mealname'>{{items.dangkou.meal[meal_id].meal_name}} </view>
   <view class='fenxiang'>
-      <button class="fxbtn" style="width:100% ;height:100%" open-type="share" >
-        <view style='height:20px;margin-top:8px;'><image src='../../images/details_icon/fenxiang.png' class="fximage"></image></view>
+      <button class="fxbtn" style="width:100%; height:100%" open-type="share" >
+        <view style='height:20px;margin-top:8px;'><image src='../../images/details_icon/fenxiang.png' class="fximage" ></image></view>
      </button>
   </view>
 </view>
@@ -37,8 +37,8 @@
         <image src="../../images/details_icon/jt.png" class="ico_img_jt"></image>
      </view>
      <view style='float:right;font-size:12px;color:#A2A2A2;'>
-        <!-- 链接的同时给评论页传递参数，d_id表示档口id,id表示菜品id -->
-        <navigator url="../comment_one/comment_one?id={{meal_id}}&&d_id={{dangkou_id}}">查看全部</navigator>
+      <!-- 链接的同时给评论页传递参数，d_id表示档口id,id表示菜品id -->
+      <navigator url="../comment_two/comment_two?id={{meal_id}}&&d_id={{dangkou_id}}">查看全部</navigator>
      </view>
      <view class='clear'></view>
     </view>
@@ -74,18 +74,19 @@
 <view class="foot-nav mt15">
   <view class="flex con gridXt tc">
     <view class="fast-links mr15 flex f12">
-        <view class="btn-item" bindtap='shoucang'>
-          <button class="dibubtn" style='width:100%;height:100%'>
-            <image wx:if="{{is_shoucang==0}}" src='../../images/details_icon/shoucang.png' class="btn-image"></image>
-            <image wx:else src='../../images/details_icon/shoucang_1.png' class="btn-image"></image>
-            <text class="iconfont {{is_shoucang==0?'icon-shoucang1':'icon-shoucang2'}}">收藏</text>
-          </button>
-        </view>
         <view class="btn-item">
          <button class="dibubtn" open-type="contact" style='width:100%;height:100%'>
            <image src='../../images/details_icon/kefu.png' class="btn-image"></image>
-          <text >上新啦~</text>
+          <text style='color: gray;' >上新啦~</text>
          </button>
+        </view>
+        <view class="btn-item" >
+          <button class="dibubtn" bindtap='shoucangbtn' data-id='{{items.dangkou.meal[meal_id].meal_name}}' style='width:100%;height:100%'>
+            <image wx:if="{{!items.dangkou.meal[meal_id].shoucang}}" src='../../images/details_icon/shoucang.png' class="btn-image"></image>
+            <image wx:else src='../../images/details_icon/shoucang_1.png' class="btn-image1"></image>
+            <text wx:if="{{!items.dangkou.meal[meal_id].shoucang}}" class="iconfont {{items.dangkou.meal[meal_id].shoucang==false?'icon-shoucang1':'icon-shoucang2'}}">收藏</text>
+            <text wx:else class="iconfont {{items.dangkou.meal[meal_id].shoucang==false?'icon-shoucang1':'icon-shoucang2'}}">已收藏</text>
+          </button>
         </view>
    </view>
     <view class="add-cart sub f16">

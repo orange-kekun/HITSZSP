@@ -1,7 +1,55 @@
 <!--pages/mycollect/mycollect.wxml-->
-<view class='fenxiang'>
-      <button class="fxbtn" open-type="share" >
-        <view style='height:20px;margin-top:8px;'><image src='../../images/details_icon/fenxiang.png' class='fximage'></image></view>
-        <view>分享</view>
-     </button>
+<view class="pagecolor">
+  <view class='head head-height'>
+    <!-- <block wx:if="{{!hasmyshoucang && canIUse}}">
+      <view class="myshoucang">
+        <image class="myshoucang-avatar" src="../../images/mineicon/myhead.png" mode="cover"></image>
+        <text class="myshoucang-nickname">微信授权</text>
+      </view>
+      <button class="login-button head-height" open-type="getmyshoucang" bindgetmyshoucang="getmyshoucang"> 获取头像昵称 </button>
+    </block> -->
+    <!-- 顶部 -->
+    <block >
+      <view class="myshoucang">
+        <image  class="myshoucang-avatar" src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/logo.jpg" mode="cover"></image>
+        <text class="myshoucang-name">爱吃的都在这儿~</text>
+      </view>
+    </block>
   </view>
+<!-- 收藏列表 -->
+  <view class="list hrcolor">
+    <view class="list-wrapper">
+      <block wx:for="{{meal1}}" wx:key="item">
+        <navigator bindtap="tap" url="../details_1/details_1?dangkou_id={{dangkou1_id[index]}}&&meal_id={{meal1_id[index]}}" class="list-item" hover-class="list-item_active">
+          <view class='item'>
+            <image class='item-image' src='{{item.picture}}'></image>
+            <text class="item-text">{{item.meal_name}}</text>
+            <text class='item-array'></text>
+          </view>
+          <view class="div-line"></view>
+        </navigator>
+      </block>
+      <block wx:for="{{meal2}}" wx:key="item">
+        <navigator bindtap="tap" url="../details_2/details_2?dangkou_id={{dangkou2_id[index]}}&&meal_id={{meal2_id[index]}}" class="list-item" hover-class="list-item_active">
+          <view class='item'>
+            <image class='item-image' src='{{item.picture}}'></image>
+            <text class="item-text">{{item.meal_name}}</text>
+            <text class='item-array'></text>
+          </view>
+          <view class="div-line"></view>
+        </navigator>
+      </block>
+      <block wx:for="{{meal3}}" wx:key="item">
+        <navigator bindtap="tap" url="../details_3/details_3?dangkou_id={{dangkou3_id[index]}}&&meal_id={{meal3_id[index]}}" class="list-item" hover-class="list-item_active">
+          <view class='item'>
+            <image class='item-image' src='{{item.picture}}'></image>
+            <text class="item-text">{{item.meal_name}}</text>
+            <text class='item-array'></text>
+          </view>
+          <view class="div-line"></view>
+        </navigator>
+      </block>
+    </view>
+  </view>
+  
+</view>

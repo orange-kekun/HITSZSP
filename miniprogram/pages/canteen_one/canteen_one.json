@@ -1,5 +1,8 @@
 {
   "usingComponents": {
     "search":"../../components/search/search"
-  }
+  },
+  "navigationBarBackgroundColor": "#FE8848",
+  "navigationBarTitleText": "一食堂",
+  "navigationBarTextStyle": "white"
 }

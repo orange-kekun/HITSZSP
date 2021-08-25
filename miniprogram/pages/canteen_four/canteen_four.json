@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#FE8848",
+  "navigationBarTitleText": "四食堂",
+  "navigationBarTextStyle": "white"
 }
