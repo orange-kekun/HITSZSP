@@ -2,5 +2,6 @@
   "usingComponents": {},
 
     "navigationBarTitleText": "关于我们",
+    "navigationBarBackgroundColor": "#FE8848",
     "navigationBarTextStyle": "white"
 }

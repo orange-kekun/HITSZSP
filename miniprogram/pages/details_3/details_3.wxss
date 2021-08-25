@@ -72,8 +72,8 @@
 .kefu button::after{border: none;}
 .kefu .button-hover{color:#333; background:none;}
 .kefu button .iconfont{ padding:0px;}
-.icon-shoucang2{color:red;}
-.icon-shoucang1{color:black;}
+.icon-shoucang2{color:#fe8b48f3;}
+.icon-shoucang1{color:gray}
 .div-line{
   background: #E0E3DA;
   width: 100%;
@@ -81,20 +81,23 @@
 }
 .content{font-size:15px;font-family: youyuan;}
 .btn-item {
-  width: 100px;
+  
    display: flex;
    align-items: center;
    flex-direction: column;
-  margin: auto;
- }
+   margin:auto
+}
  .btn-item .btn-image {
    width: 50rpx;
    height: 50rpx;
  }
+ .btn-item .btn-image1 {
+  width: 60rpx;
+  height: 60rpx;
+}
  .btn-item text {
    margin-top: 5rpx;
    font-size: 25rpx;
    padding: 0;
-   color: gray;
  }
 .dibubtn{background: none;border:none;border-radius: 0px;margin-top:5px ;padding:1px;}

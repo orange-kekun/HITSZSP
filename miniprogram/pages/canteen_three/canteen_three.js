@@ -20,7 +20,8 @@ Page({
       // 获取的值赋给items
       items:res.data
     })
-    }).catch(err=>{console.log(err)})
+    console.log("items数据",this.data.items)
+    })
   },
   tap:function(e)
   {
