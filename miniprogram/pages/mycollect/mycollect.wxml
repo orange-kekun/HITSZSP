@@ -17,7 +17,10 @@
     </block>
   </view>
 <!-- 收藏列表 -->
-  <view class="list hrcolor">
+<view style="justify-content: center;align-items: center;display: flex;height: 400px;" wx:if="{{meal1.length+meal2.length+meal3.length==0}}">
+<image style="width:250px;height:250px;" src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/beijing.jpg" ></image>
+</view>
+ <view class="list hrcolor" wx:else>
     <view class="list-wrapper">
       <block wx:for="{{meal1}}" wx:key="item">
         <navigator bindtap="tap" url="../details_1/details_1?dangkou_id={{dangkou1_id[index]}}&&meal_id={{meal1_id[index]}}" class="list-item" hover-class="list-item_active">
@@ -26,7 +29,7 @@
             <text class="item-text">{{item.meal_name}}</text>
             <text class='item-array'></text>
           </view>
-          <view class="div-line"></view>
+          <view wx:if="{{index<meal1.length-1||meal2.length+meal3.length>0}}" class="div-line"></view>
         </navigator>
       </block>
       <block wx:for="{{meal2}}" wx:key="item">
@@ -36,7 +39,7 @@
             <text class="item-text">{{item.meal_name}}</text>
             <text class='item-array'></text>
           </view>
-          <view class="div-line"></view>
+          <view  class="div-line" wx:if="{{index<meal1.length-1||meal3.length>0}}"></view>
         </navigator>
       </block>
       <block wx:for="{{meal3}}" wx:key="item">
@@ -46,7 +49,7 @@
             <text class="item-text">{{item.meal_name}}</text>
             <text class='item-array'></text>
           </view>
-          <view class="div-line"></view>
+          <view wx:if="{{index<meal3.length-1}}" class="div-line"></view>
         </navigator>
       </block>
     </view>

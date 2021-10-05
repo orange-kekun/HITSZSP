@@ -1,11 +1,12 @@
-<view>
+<view class="pagecolor">
+   
      <view>
         <view class="weui-search-bar">
             <view class="weui-search-bar__form">
             <!-- 最初始时的搜索框 -->
                 <view class="weui-search-bar__box">
                     <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                    <input type="text" class="weui-search-bar__input" v-model="{{inputVal}}" bindblur='changeSearch' bindconfirm='changeSearch' bindinput='changeSearch' placeholder="搜索"/>
+                    <input type="text" class="weui-search-bar__input" v-model="{{inputVal}}" bindblur='changeSearch' bindconfirm='changeSearch' bindinput='changeSearch' placeholder="输入你想吃的东西吧~"/>
                 </view>
                 <!-- 可编辑时的搜索框 -->
                 <!-- <label class="weui-search-bar__label"  bindtap="showInput">
@@ -14,17 +15,43 @@
                 </label> -->
             </view>
             <!-- 取消搜索 -->
-            <view class="weui-search-bar__cancel-btn" bindtap="showInput">搜索</view>
+            <button style="width: 75px;margin-left: 5px;" class="weui-search-bar__cancel-btn" bindtap="showInput">搜索</button>
         </view>
     </view>
-    <view wx:for="{{search_list1}}" wx:key="index" data-item="{{item}}" class="items"  data-key="item" bindtap="toAppendFiduciary">
+<!-- 1 -->
+<view style="justify-content: center;align-items: center;display: flex;height: 400px;" wx:if="{{search_list1.length+search_list2.length+search_list3.length==0}}">
+<image style="width:250px;height:250px;" src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/beijing.jpg" ></image>
+</view>
+    <block wx:for="{{search_list1}}" wx:key="index" data-item="{{item}}"  data-key="item" bindtap="toAppendFiduciary">
+        <navigator  class="items"  url="../details/details?dangkou_id={{item.dangkou_id}}&&meal_id={{item.meal_id}}">
         <view class="left">
-            <!-- <image data-dialog="dialogSearchType" bindtap="showDialog" src="{{iconSelector}}"></image> -->
-            <image src="{{item.dangkou.meal[0].picture}}"></image>
+            <image src="{{item.meal.picture}}"></image>
         </view>
         <view class="right">
-            {{item.dangkou.dangkou_name}}
+            {{item.meal.meal_name}}
         </view>
-        <!-- <view>{{item.dangkou.dangkou_name}}</view> -->
-    </view>
+        </navigator>
+    </block>
+<!-- 2 -->
+    <block wx:for="{{search_list2}}" wx:key="index" data-item="{{item}}"  data-key="item" bindtap="toAppendFiduciary">
+        <navigator  class="items"  url="../details/details?dangkou_id={{item.dangkou_id}}&&meal_id={{item.meal_id}}">
+        <view class="left">
+            <image src="{{item.meal.picture}}"></image>
+        </view>
+        <view class="right">
+            {{item.meal.meal_name}}
+        </view>
+        </navigator>
+    </block>
+<!-- 3 -->
+    <block wx:for="{{search_list3}}" wx:key="index" data-item="{{item}}" data-key="item" bindtap="toAppendFiduciary">
+        <navigator class="items" url="../details/details?dangkou_id={{item.dangkou_id}}&&meal_id={{item.meal_id}}">
+        <view class="left">
+            <image src="{{item.meal.picture}}"></image>
+        </view>
+        <view class="right">
+            {{item.meal.meal_name}}
+        </view>
+        </navigator>
+    </block>
 </view>

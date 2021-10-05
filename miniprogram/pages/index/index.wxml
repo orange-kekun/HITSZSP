@@ -1,105 +1,63 @@
-<search></search>
-  <view class="pagecolor">
+<view class="pagecolor"><search></search>
+
+  <!-- /*顶部轮播图*/ -->
   <swiper  class='s-box'autoplay="true" circular="true"   next-margin="0">
   <swiper-item class='s-one'>
     <image  mode="aspectFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_1.jpg" ></image>
   </swiper-item>
 
-  <swiper-item class='s-two'>
+  <swiper-item class='s-one'>
    <image   mode="aspectFill" src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_2.jpg" ></image>
   </swiper-item>
 
-  <swiper-item class='s-three'>
+  <swiper-item class='s-one'>
    <image  mode="aspectFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_3.jpg" ></image>
   </swiper-item>
 
-  <swiper-item class='s-four'>
+  <swiper-item class='s-one'>
     <image  mode="aspectFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/canteen_4.jpg" ></image>
   </swiper-item>
-
-  
    </swiper>
-
+<!-- 食堂分类 -->
    <view class="allbox">
    <view class='tip'><image class='index_icon' src='../../images/index_icon/cateensort.png'></image>选择食堂</view>
    <view class="div-line"></view>
    <view class='sort'> 
-    <view class='one'><navigator url="/pages/canteen_one/canteen_one"> <image  mode="scaleToFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/1.png"></image></navigator></view>
-    <view class='two'><navigator url="/pages/canteen_two/canteen_two"><image   mode="scaletofill" src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/2.png" ></image></navigator></view>
-
-    <view class='three'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/3.png" ></image></navigator></view>
-
-    <view class='four'><navigator url="/pages/canteen_three/canteen_three"><image  mode="scaleToFill"  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/4.png" ></image></navigator></view>
+    <view class='sort-box'><navigator url="/pages/canteen_one/canteen_one"> <image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/1.jpg"></image></navigator></view>
+    <view class='sort-box'><navigator url="/pages/canteen_two/canteen_two"><image   class='sort-picture' src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/2.jpg"></image></navigator></view>
+    <view class='sort-box'><navigator url="/pages/canteen_three/canteen_three"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/3.jpg"></image></navigator></view>
+    <view class='sort-box'><navigator url="/pages/canteen_three/canteen_three"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/4.jpg"></image></navigator></view>
   </view>
 </view>
 
-
+<!-- 新品推荐 -->
 <view class="allbox">
   <view class='tip'><image class='index_icon' src='../../images/index_icon/new.png'></image>新品推荐</view>
   <view class="div-line"></view>
-  <scroll-view scroll-x>
+  <scroll-view scroll-x lower-threshold="0" bindscrolltolower="tanchuang">
     <view class="srcout">
-    <view class='srcbox'>
-
-    <navigator ><image>
-    </image></navigator>
+      <block wx:for="{{xing}}" wx:key="value">
+        <view class='srcbox'>
+          <navigator url="../details/details?dangkou_id={{item.dangkou}}&&meal_id=0"><image class='box-image' src='{{item.meal.picture}}'> 
+          </image><view class='box-view'>{{item.meal.meal_name}}</view></navigator>
+        </view>
+      </block>
     </view>
-    <view class='srcbox'>
-   <navigator ><image>
-   </image></navigator>
-  </view>
-  <view class='srcbox'>
-   <navigator ><image>
-
-  </image></navigator>
-  </view>
-  <view class='srcbox'>
-   <navigator ><image>
-
-  </image></navigator>
-  </view>
-  <view class='srcbox'>
-   <navigator ><image>
-
-  </image></navigator>
-  </view>
-  </view>
   </scroll-view>
 </view>
-
+<!-- 人气推荐 -->
 <view class="allbox">
   <view class='tip'><image class='index_icon' src="../../images/index_icon/hot.png"></image>人气推荐</view>
   <view class="div-line"></view>
-  <scroll-view scroll-x>
+  <scroll-view scroll-x lower-threshold="0" bindscrolltolower="tanchuang1">
    <view class="srcout">
-  <view class='srcbox'>
-  
-  <navigator ><image>
-
-  </image></navigator>
-  </view>
-  <view class='srcbox'>
-   <navigator ><image>
-
-  </image></navigator>
-  </view>
-  <view class='srcbox'>
-   <navigator ><image>
-
-  </image></navigator>
-  </view>
-  <view class='srcbox'>
-   <navigator ><image>
-
-  </image></navigator>
-    </view>
+    <block wx:for="{{renqi}}" wx:key="value">
       <view class='srcbox'>
-        <navigator ><image>
-        </image></navigator>
-     </view>
+        <navigator url="../details/details?dangkou_id={{item.dangkou}}&&meal_id=0"><image class='box-image' src='{{item.meal.picture}}'>
+        </image><view class='box-view'>{{item.meal.meal_name}}</view></navigator>
+      </view>
+    </block>
     </view>
-    </scroll-view>
-  </view>
-    <view class='random'></view>
-    <button class='ranbutton'>点击测试今日食物</button>
+  </scroll-view>
+</view>
   </view>
