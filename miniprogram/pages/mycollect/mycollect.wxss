@@ -94,8 +94,9 @@
 .item-image {
   position: absolute;
   left: 50rpx;
-  width: 150rpx;
-  height: 150rpx;
+  width: 155rpx;
+  height: 155rpx;
+  border-radius: 10rpx;
 }
 .button{
   margin: 50rpx;

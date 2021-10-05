@@ -1,9 +1,11 @@
 {
   "pages": [
+    
     "pages/index/index",
     "pages/details_1/details_1",
     "pages/details_2/details_2",
     "pages/details_3/details_3",
+    "pages/details/details",
     "pages/search/search",
     "pages/mine/mine",
     "pages/canteen_one/canteen_one",

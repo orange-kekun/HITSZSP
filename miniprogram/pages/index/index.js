@@ -5,16 +5,119 @@ Page({
    * 页面的初始数据
    */
   data: {
-    
+    items1:[],
+    items2:[],
+    items3:[],
+    xing:[
+          ],
+    renqi:[
+            ]     
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function () {
+    const db=wx.cloud.database()
+    const _=db.command
+    // 获取一食堂数据
+    db.collection('canteen1')
+    .get()
+    .then(res=>{
+       console.log("sucess",res)
+     this.setData({
+      items1:res.data
+      })
+      var renqi5='renqi'+'[4]'+'.meal'
+      var renqi4='renqi'+'[3]'+'.meal'
+      var renqi55='renqi'+'[4]'+'.dangkou'
+      var renqi44='renqi'+'[3]'+'.dangkou'
+      this.setData({
+        [renqi5]:this.data.items1[4].dangkou.meal[0],
+        [renqi4]:this.data.items1[1].dangkou.meal[0],
+        [renqi55]:this.data.items1[4]._id,
+        [renqi44]:this.data.items1[1]._id,
+       })
+    }).catch(res=>{
+      console.log("failed",res)
+   })
+   
+    db.collection("canteen2").get().then(res=>{console.log(res.data)
+      this.setData({
+        // 获取的二食堂值赋给items2
+        items2:res.data
+      })
+      var xing1='xing'+'[0]'+'.meal'
+      var xing2='xing'+'[1]'+'.meal'
+      var xing5='xing'+'[4]'+'.meal'
+       var xing6='xing'+'[5]'+'.meal'
+       var xing11='xing'+'[0]'+'.dangkou'
+       var xing22='xing'+'[1]'+'.dangkou'
+       var xing55='xing'+'[4]'+'.dangkou'
+       var xing66='xing'+'[5]'+'.dangkou'
+       var renqi2='renqi'+'[1]'+'.meal'
+       var renqi22='renqi'+'[1]'+'.dangkou'
+       this.setData({
+        [xing1]:this.data.items2[6].dangkou.meal[0],
+        [xing2]:this.data.items2[1].dangkou.meal[0],
+        [xing5]:this.data.items2[3].dangkou.meal[0],
+        [xing6]:this.data.items2[4].dangkou.meal[0],
+        [renqi2]:this.data.items2[0].dangkou.meal[0],
+        [xing11]:this.data.items2[6]._id,
+        [xing22]:this.data.items2[1]._id,
+        [xing55]:this.data.items2[3]._id,
+        [xing66]:this.data.items2[4]._id,
+        [renqi22]:this.data.items2[0]._id
+       })
+      }).catch(err=>{console.log(err)})
+    db.collection("canteen3").get().then(res=>{console.log(res.data)
+        this.setData({
+          // 获取的三食堂值赋给items3
+          items3:res.data
+        })
+        var xing3='xing'+'[2]'+'.meal'
+        var xing4='xing'+'[3]'+'.meal'
+        var renqi3='renqi'+'[2]'+'.meal'
+        var renqi33='renqi'+'[2]'+'.dangkou'
+        var renqi1='renqi'+'[0]'+'.meal'
+        var renqi11='renqi'+'[0]'+'.dangkou'
+        var renqi6='renqi'+'[5]'+'.meal'
+        var renqi66='renqi'+'[5]'+'.dangkou'
+         var xing33='xing'+'[2]'+'.dangkou'
+         var xing44='xing'+'[3]'+'.dangkou'
+       this.setData({
+         [xing3]:this.data.items3[4].dangkou.meal[0],
+         [xing4]:this.data.items3[5].dangkou.meal[0],
+         [xing33]:this.data.items3[4]._id,
+         [xing44]:this.data.items3[5]._id,
+         [renqi33]:this.data.items3[3]._id,
+         [renqi3]:this.data.items3[3].dangkou.meal[0],
+         [renqi11]:this.data.items3[9]._id,
+         [renqi1]:this.data.items3[9].dangkou.meal[0],
+         [renqi66]:this.data.items3[0]._id,
+         [renqi6]:this.data.items3[0].dangkou.meal[0]
+        })
+        console.log('赋值',this.data.xing)
+        console.log('赋值',this.data.renqi)
+
+        }).catch(err=>{console.log(err)})
     
+
+  },
+  
+  tanchuang1:function(e){
+    wx.showToast({
+      title: "爆款就这些啦~",
+      icon:'none'
+    })
   },
 
+  tanchuang:function(e){
+    wx.showToast({
+      title: "新品就这些啦~",
+      icon:'none'
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

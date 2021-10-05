@@ -4,79 +4,57 @@
 }
 .srcout
 {
-  height: 100%rpx;
+  height: auto;
   display:flex;
   flex-wrap: nowrap;
   align-items: flex-start;
 }
 .srcbox
 {
-  width: 100rpx;
-  height: 400rpx;
-  background-color:orange;
-  flex:0 0 500rpx;
-  border-radius: 60rpx;
+  width: 400rpx;
+  height: auto;
+ flex:500rpx 0 ;
+margin-left: 6rpx;
+margin-right: 6rpx;
   margin-top:10rpx;
+}
+.box-image
+{
+  width: 350rpx;
+  height: 350rpx;
+  border-radius: 60rpx;
+}
+.box-view
+{
+  height:auto;
+  display: flex;
+  align-items: center;  
+  vertical-align: center; 
+  justify-content: center; 
 }
 .sort{
   width: 100%;
-  height: 100px;
   margin-top: 20rpx;
   display:flex;
 justify-content: space-evenly;
 
 }
-.one{
+.sort-box{
   width: 180rpx;
-  height: 200rpx;
-  background-color: rgb(238, 123, 16);
+  height: 180rpx;
   border-radius: 5px;
 }
-.two
-{
-  width: 180rpx;
-  height: 200rpx;
-  background-color: rgb(238, 123, 16);
-  border-radius: 5px;
-}
-.three
-{
-  width: 180rpx;
-  height: 200rpx;
-  background-color: rgb(238, 123, 16);
-  border-radius: 5px;
-}
-.four{
-  width: 180rpx;
-  height: 200rpx;
-  background-color: rgb(238, 123, 16);
-  border-radius: 5px;
+.sort-picture{
+  width: 175rpx;
+  height: 175rpx;
+  margin:5rpx;
+  border-radius: 100%;
 }
 .s-one
 {
   background-color: rgb(238, 123, 16);
   border-radius: 20rpx;
   
-}
-.s-two
-{
-  background-color: rgb(238, 123, 16);
-  border-radius: 20rpx;
- 
- 
-}
-.s-three
-{
-  background-color: #f36a0e;
-  border-radius: 20rpx;
-
-}
-
-.s-four
-{
-  background-color: #f36a0e;
-  border-radius: 20rpx;
-
 }
 .s-box
 {
@@ -94,10 +72,6 @@ justify-content: space-evenly;
 .s-box swiper-item
 {
   padding-left: 0rpx;
-}
-.sort image{
-  width: 180rpx;
-  height: 200rpx;
 }
 .pagecolor{
   min-height: 100vh;
@@ -121,18 +95,23 @@ justify-content: space-evenly;
     align-items: center;
     height: 80rpx;
     font-weight: 500;
+    background:linear-gradient(to top, white, #eeb174);
+
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
 }
 .index_icon{
-  width: 60rpx;
-  height: 60rpx;
+  width: 70rpx;
+  height: 70rpx;
 }
 
 .allbox{
   border: 3rpx solid white;
   background-color: white;
  border-radius: 30rpx;
-   padding: 10rpx;
+   padding: 0 2rpx 10rpx 2rpx;
    margin:20rpx 10rpx;
+   border-color:#E0E3DA;
 }
 .div-line{
   background: #E0E3DA;

@@ -1,13 +1,13 @@
 // pages/details/details.js
 const db=wx.cloud.database()
 const _=db.command
-const mealsCollection = db.collection('canteen2')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    canteen_all:'',
     newsList: [], //列表数据
     iscard: [], //打过卡的id集合
     daka_people: [], //每个列表数据的打卡的用户集合
@@ -30,13 +30,16 @@ Page({
  
     var meal_id = options.meal_id
     var dangkou_id=options.dangkou_id
+    const cateenall='canteen'+options.dangkou_id.slice(0,1)
+    console.log(cateenall)
   //接受页面传递数据
     this.setData({
       meal_id:meal_id,
-      dangkou_id:dangkou_id
+      dangkou_id:dangkou_id,
+      canteen_all:cateenall
     })
     console.log("接受的数据",options)
-    wx.cloud.database().collection("canteen2")
+    wx.cloud.database().collection(this.data.canteen_all)
     .doc(options.dangkou_id)
     .get()
     .then(res=>{
@@ -58,7 +61,7 @@ Page({
           openid: res.result.openid
        })
     
-       wx.cloud.database().collection("canteen2")
+       wx.cloud.database().collection(this.data.canteen_all)
        .doc(options.dangkou_id)
        .get()
        .then(res=>{
@@ -184,13 +187,14 @@ thumbsup: function (e) {
       var meal__id=that.data.meal_id
       var dangkou__id=that.data.dangkou_id
       var meal__id=that.data.meal_id
+      var canteen_all=that.data.canteen_all
       console.log(this.data.newsList)
       wx.cloud.callFunction(
         {
           name:'daka',
           data:
           {
-          canteen:'canteen2',
+          canteen:canteen_all,
           dangkou:dangkou__id,
           meal_id:meal__id,
           daka_people:this.data.newsList[i].daka_people,
@@ -263,13 +267,14 @@ shoucangbtn: function (e) {
       var meal__id=that.data.meal_id
       var dangkou__id=that.data.dangkou_id
       var meal__id=that.data.meal_id
+      var canteen_all=that.data.canteen_all
       console.log(this.data.newsList)
       wx.cloud.callFunction(
         {
           name:'shoucang',
           data:
           {
-          canteen:'canteen2',
+          canteen:canteen_all,
           dangkou:dangkou__id,
           meal_id:meal__id,
           shoucang_people:this.data.newsList[i].shoucang_people,
