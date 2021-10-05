@@ -1,3 +1,6 @@
 {
-  "usingComponents": {}
+  "usingComponents": {},
+  "navigationBarBackgroundColor": "#FE8848",
+  "navigationBarTitleText": "今天吃点什么呢",
+  "navigationBarTextStyle": "white"
 }

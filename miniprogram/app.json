@@ -14,18 +14,17 @@
     "pages/mycomment/mycomment",
     "pages/comment_one/comment_one",
     "pages/comment_three/comment_three",
+
     "pages/searchShow",
     "pages/searchShow/seaarchShow",
     "pages/comment_two/comment_two",
     "pages/details/details"
 
+
   ],
   "window": {
     "backgroundColor": "#FE8848",
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#FE8848",
-    "navigationBarTitleText": "HITSZ-RECIPE",
-    "navigationBarTextStyle": "white"
+    "backgroundTextStyle": "light"
   },
   "tabBar": {
     "color": "#999",

@@ -1,8 +1,124 @@
-/* pages/mycollect/mycollect.wxss */
-.fenxiang button::after{border: none;}
-.fxbtn{background: none;border:none;margin:0px;padding:0px;border-radius: 0px;font-size: 12px;}
-.fximage{  width: 40rpx;
-  height: 40rpx;
-padding: 0rpx
-;}
-.fenxiang{line-height: 1px;float:right;}
+.pagecolor{
+    min-height: 100vh;
+    background-color:#f4f5f6;
+}
+.hrcolor{
+  background-color: white;
+}
+.head-height {
+  height: 200rpx;
+}
+.head {
+  display:flex;
+  width: 100%;
+  background: size 150rpx;
+  background:linear-gradient(#fe8848,white);
+  align-items: center;
+}
+ 
+.login-button {
+  opacity: 0; 
+  width: 100%;
+  position: fixed;
+}
+ 
+.myshoucang {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+}
+ 
+.myshoucang-avatar {
+  width: 125rpx;
+  height: 125rpx;
+  margin: 30rpx;
+  border-radius: 50%;
+}
+ 
+.myshoucang-name {
+  color: #333333;
+  font-size: 38rpx;
+}
+/* 菜单栏样式 */
+.list{
+    border: 3rpx solid white;
+   border-radius: 10rpx;
+     padding: 10rpx;
+     margin:20rpx 20rpx;
+ }
+
+.list-wrapper {
+  width: 100%; 
+}
+
+/* 横着的分割View样式 */
+/*分割线样式*/
+.div-line{
+  background: #E0E3DA;
+  width: 100%;
+  height: 3rpx;
+}
+
+.list-item {
+  width: 100%;
+  height: 200rpx;
+}
+
+.list-item_active {
+  background-color: #E0E3DA;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 200rpx;
+}
+.item-text {
+  position:absolute;
+  left: 210rpx;
+  font-size: 40rpx;
+}
+.item-array {
+    width: 5px;
+    height: 5px;
+    border-top: 2px solid #999;
+    border-right: 2px solid #999;
+    position: absolute;
+    right: 40rpx;
+    transform: rotate(45deg);
+}
+
+.item-image {
+  position: absolute;
+  left: 50rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.button{
+  margin: 50rpx;
+  width:200rpx;
+  height: 125rpx;
+  border-radius: 100rpx;
+  background-color:#fea06e;
+  color: white;
+  line-height: 35rpx;
+  align-items: center;
+  text-align: center;
+
+}
+.btnimg {
+  margin-right: 8rpx;
+  width: 46rpx;
+  height: 46rpx;
+}
+.btnfont{
+  font-weight: 160;
+  font-size:30rpx;
+}
+.dibufont{
+  font-size:small;
+  color:#777777;
+  text-align:center;
+}

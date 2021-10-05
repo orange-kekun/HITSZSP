@@ -2,5 +2,9 @@
   "usingComponents": {
     "Tabs":"../../components/Tabs/Tabs",
     "search":"../../components/search/search"
-  }
+  },
+    "navigationBarBackgroundColor": "#FE8848",
+    "navigationBarTitleText": "HITSZ-RECIPE",
+    "navigationBarTextStyle": "white"
+  
 }

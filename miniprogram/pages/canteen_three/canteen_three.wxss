@@ -95,3 +95,13 @@ padding: 10rpx;
   font-size: 30rpx;
   color:#2e2e2e;
 }
+/* 隐藏scroll-view的滚动条 */
+::-webkit-scrollbar {
+ 
+  width:0;
+   
+  height:0;
+   
+  color:transparent;
+   
+  }
