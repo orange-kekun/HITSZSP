@@ -8,7 +8,6 @@
      <view class="nav_left_items{{index==curindex?'active':''}}" data-index="{{index}}"
      bindtap="tap">
        {{item.dangkou.dangkou_name}}
-      
       </view>
    </block>
  </view>

@@ -49,8 +49,7 @@
  }
 
 .list-wrapper {
-  width: 100%;
-  
+  width: 100%; 
 }
 
 /* 横着的分割View样式 */

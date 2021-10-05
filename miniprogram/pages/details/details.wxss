@@ -1,3 +1,4 @@
+
 /* pages/details_2/details_2.wxss *//* pages/details/details.wxss */
 .clear{clear: both;overflow: hidden;}
 .banner{height:300px;}
@@ -101,3 +102,4 @@
    padding: 0;
  }
 .dibubtn{background: none;border:none;border-radius: 0px;margin-top:5px ;padding:1px;}
+/* pages/details/details.wxss */

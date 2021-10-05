@@ -26,6 +26,22 @@ Page({
    */
   onLoad: function (options) {
      //获取用户的openid
+     var userInfo= wx.getStorageSync('user');//判断用户是否登录
+     var username=userInfo.nickName//获取用户的头像和昵称
+     var userimage=userInfo.avatarUrl
+     if(userInfo == ''){
+       wx.showModal({
+         title: '提示',
+         content: '请您先前往“我的”页面授权登录',
+         showCancel: false,
+         success (res){
+           if (res.confirm) {
+             wx.navigateBack({
+             })
+           } 
+         }
+       })
+     }
     const db=wx.cloud.database()
     const _=db.command
     wx.cloud.callFunction({
@@ -35,7 +51,7 @@ Page({
         this.setData({
           openid: res.result.openid
         })
-
+        console.log(this.data.openid)
 //循环无法实现只能把代码复制粘贴3次了
 // 1  
           db.collection('canteen1')
@@ -48,16 +64,12 @@ Page({
            console.log("items数据",this.data.items)
            var h=0
            for (var i = 0; i < this.data.items.length; i++){
-            console.log('i',i)
              for(var j = 0; j < this.data.items[i].dangkou.meal.length; j++){
-               console.log('j',j)
                for(var k = 0; k < this.data.items[i].dangkou.meal[j].shoucang_people.length; k++){
-                 console.log('k',k)
                   if(this.data.items[i].dangkou.meal[j].shoucang_people[k] == this.data.openid){//把已收藏的菜品信息放入新数组
                    var temp='meal1'+'['+h+']'
                    var temp1='meal1_id'+'['+h+']'
                    var temp3='dangkou1_id'+'['+h+']'
-                   console.log('将放入',temp)
                     this.setData({
                       [temp]:this.data.items[i].dangkou.meal[j],
                       [temp1]:this.data.temp2[j],
@@ -82,22 +94,18 @@ Page({
           console.log("items数据",this.data.items)
           var h=0
           for (var i = 0; i < this.data.items.length; i++){
-           console.log('i',i)
             for(var j = 0; j < this.data.items[i].dangkou.meal.length; j++){
-              console.log('j',j)
-              for(var k = 0; k < this.data.items[i].dangkou.meal[j].shoucang_people.length; k++){
-                console.log('k',k)   
+              for(var k = 0; k < this.data.items[i].dangkou.meal[j].shoucang_people.length; k++){ 
                  if(this.data.items[i].dangkou.meal[j].shoucang_people[k] == this.data.openid){//把已收藏的菜品信息放入新数组
                   var temp='meal2'+'['+h+']'
                   var temp1='meal2_id'+'['+h+']'
                   var temp3='dangkou2_id'+'['+h+']'
-                  console.log('将放入',temp)
                    this.setData({
                      [temp]:this.data.items[i].dangkou.meal[j],
                      [temp1]:this.data.temp2[j],
                      [temp3]:'20'+this.data.temp4[i]
                    })
-                   h=h+1
+                   h=h+1 
                  }
               }
             }
@@ -116,16 +124,12 @@ Page({
            console.log("items数据",this.data.items)
            var h=0
            for (var i = 0; i < this.data.items.length; i++){
-            console.log('i',i)
              for(var j = 0; j < this.data.items[i].dangkou.meal.length; j++){
-               console.log('j',j)
-               for(var k = 0; k < this.data.items[i].dangkou.meal[j].shoucang_people.length; k++){
-                 console.log('k',k)        
+               for(var k = 0; k < this.data.items[i].dangkou.meal[j].shoucang_people.length; k++){     
                   if(this.data.items[i].dangkou.meal[j].shoucang_people[k] == this.data.openid){//把已收藏的菜品信息放入新数组
                    var temp='meal3'+'['+h+']'
                    var temp1='meal3_id'+'['+h+']'
                    var temp3='dangkou3_id'+'['+h+']'
-                   console.log('将放入',temp)
                     this.setData({
                       [temp]:this.data.items[i].dangkou.meal[j],
                       [temp1]:this.data.temp2[j],

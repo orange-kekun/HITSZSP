@@ -1,10 +1,15 @@
 <!-- 上方是历史评价信息 -->
+
+<block wx:if="{{pinglun==''}}">
+<view class='head'>
+<text>这道菜还没有人评论哦</text>
+</view>
+</block>
+<block wx:else>
 <block wx:for="{{pinglun}}" wx:key='index'>
 <!-- 展示评论者的微信头像和名称 -->
-<!-- <view wx:if="{{item.name=''}}"><text>暂无评论</text></view> -->
-
-<!-- <view wx:else > -->
-<view class='box'>
+<view class="{{index==0?'head':'box'}}">
+<view class='user'>
 <image class='tupian' src="{{item.image}}"></image>
 <text >
 {{item.name}}
@@ -13,10 +18,11 @@
 <text>
 {{item.content}}
 </text>
+</view>
+<view class="div-line"></view>
+</block>
+
 <!-- </view> -->
-
-
-
 </block>
 <!-- 发表评论 -->
 <input class='input' type="text" placeholder="说点什么吧" bindinput="getContent" value='{{content}}'>

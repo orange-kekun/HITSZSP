@@ -1,6 +1,8 @@
 // pages/details/details.js
+
 const db=wx.cloud.database()
 const _=db.command
+
 Page({
 
   /**
@@ -22,12 +24,12 @@ Page({
       duration: 1000,
       dangkou_id:'',
   },
-  
+
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
- 
     var meal_id = options.meal_id
     var dangkou_id=options.dangkou_id
     const cateenall='canteen'+options.dangkou_id.slice(0,1)
@@ -288,6 +290,8 @@ shoucangbtn: function (e) {
     }
   }
 },
+
+  },
 
   /**
    * 生命周期函数--监听页面初次渲染完成

@@ -16,7 +16,13 @@
     "pages/mycomment/mycomment",
     "pages/comment_one/comment_one",
     "pages/comment_three/comment_three",
-    "pages/comment_two/comment_two"
+
+    "pages/searchShow",
+    "pages/searchShow/seaarchShow",
+    "pages/comment_two/comment_two",
+    "pages/details/details"
+
+
   ],
   "window": {
     "backgroundColor": "#FE8848",

@@ -1,8 +1,8 @@
 let username=''
 let userimage=''
-let newpinglun={name:'',content:'',image:''}
 let d_id=''
 let meal_id=''//由detail页面传递的菜品编号的信息
+let openid=''
 Page({
 
   /**
@@ -10,7 +10,8 @@ Page({
    */
   data: {
     pinglun:[],
-    content:''
+    content:'',
+    openid:'',
   },
   /**
    * 生命周期函数--监听页面加载
@@ -22,7 +23,6 @@ Page({
     meal_id=options.id
     var userInfo= wx.getStorageSync('user');//判断用户是否登录
     username=userInfo.nickName//获取用户的头像和昵称
-    console.log(username)
     userimage=userInfo.avatarUrl
     if(userInfo == ''){
       wx.showModal({
@@ -53,7 +53,6 @@ Page({
     })
     
   },
- 
    // 获取input用户输入的评论
   getContent(e){
    this.setData({
@@ -63,7 +62,16 @@ Page({
   // 用户点击发表评论
   fabiao()
   {
-    let content=this.data.content
+    var newpinglun={name:'',content:'',image:'',openid:''}
+    var content=this.data.content
+    wx.cloud.callFunction({
+      name: 'getOpenid',
+      complete: res => { 
+        openid=res.result.openid
+        this.setData({
+          openid: res.result.openid
+        })
+
     if(content.length<1)
     {
       wx.showToast({
@@ -74,12 +82,10 @@ Page({
     // 创建新的评论对象并插入
     newpinglun.content=content
     newpinglun.name=username
-    newpinglun.image=userimage//此处用云函数换为用户名称
-    let pinglunArr=this.data.pinglun
-    console.log(username)
-    console.log(newpinglun.username)
+    newpinglun.image=userimage
+    newpinglun.openid=this.data.openid//此处用云函数换为用户名称
+    var pinglunArr=this.data.pinglun
     pinglunArr.push(newpinglun)
-    console.log(pinglunArr)
     wx.showLoading({
       title: '发布中',
     })
@@ -92,9 +98,8 @@ Page({
         dangkou:d_id,
         meal_id:meal_id,
         pj:pinglunArr,
-        }
-        
-      }
+        } 
+      } 
     ).then(res=>{console.log("发表成功",res)
   this.setData({
     pinglun:pinglunArr,
@@ -103,8 +108,9 @@ Page({
   wx.hideLoading()
   }).catch(res=>{console.log("发表失败",res)
   wx.hideLoading()})
-  },
-  
-  
+}})},
 
+
+
+  
 })
