@@ -39,7 +39,7 @@
             <text class="item-text">{{item.meal_name}}</text>
             <text class='item-array'></text>
           </view>
-          <view  class="div-line" wx:if="{{index<meal1.length-1||meal3.length>0}}"></view>
+          <view  class="div-line" wx:if="{{index<meal2.length-1||meal3.length>0}}"></view>
         </navigator>
       </block>
       <block wx:for="{{meal3}}" wx:key="item">
