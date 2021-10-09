@@ -1,3 +1,0 @@
-<block wx:for="{{items}}">
-id={{item._id}}
-</block>

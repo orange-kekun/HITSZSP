@@ -5,13 +5,18 @@ Page({
    * 页面的初始数据
    */
   data: {
+    showModal: false,
     items1:[],
     items2:[],
     items3:[],
+    temp4:['01','02','03','04','05','06','07','08','09','10','11','12','13','14','15','16','17','18','19','20','21','22','23'],
     xing:[
           ],
     renqi:[
-            ]     
+            ],
+    tuijian:'',
+    tuijian_id:'',
+    tuijian_mealid:''   
   },
 
   /**
@@ -118,9 +123,61 @@ Page({
       icon:'none'
     })
   },
+  shuiji:function(){
+    //生成随机数
+    var n=Math.floor(Math.random()*3+1);
+    var canteen='canteen'+n;
+    var id=n+'0'+this.data.temp4[Math.floor(Math.random()*7+1)]
+    console.log(n,id,canteen)
+    const db=wx.cloud.database()
+    const _=db.command
+    // 获取数据
+    db.collection(canteen)
+    .doc(id)
+    .get()
+    .then(res=>{
+       console.log("sucess",res)
+     var m=Math.floor(Math.random()*res.data.dangkou.meal.length)
+     console.log(m)
+     this.setData({
+      tuijian:res.data.dangkou.meal[m],
+      tuijian_id:id,
+      tuijian_mealid:m
+      })
+      this.setData({
+      showModal: true
+      })
+      console.log(this.data.tuijian)
+    }).catch(res=>{
+      console.log("failed",res)
+   })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
+  /**
+   * 弹出框蒙层截断touchmove事件
+   */
+  preventTouchMove: function () {
+  },
+  /**
+   * 隐藏模态对话框
+   */
+  hideModal: function () {
+    this.setData({
+      showModal: false
+    });
+  },
+  /**
+   * 对话框取消按钮点击事件
+   */
+  onCancel: function () {
+    this.hideModal();
+  },
+  /**
+   * 对话框确认按钮点击事件
+   */
+
   onReady: function () {
   
     

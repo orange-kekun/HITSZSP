@@ -1,4 +1,4 @@
-<!--pages/details/details.wxml-->
+
 
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" class="banner" duration="{{duration}}" circular="{{duration}}">
     <swiper-item>
@@ -96,5 +96,4 @@
   </view>
 </view>
 
-<text>pages/details/details.wxml</text>
 

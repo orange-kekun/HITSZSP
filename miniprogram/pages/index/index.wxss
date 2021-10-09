@@ -94,12 +94,13 @@ justify-content: space-evenly;
     flex-direction: row;
     align-items: center;
     height: 80rpx;
-    font-weight: 500;
+    font-weight: 300;
     background:linear-gradient(to top, white, #eeb174);
 
     border-top-left-radius: 10px;
     border-top-right-radius:10px;
 }
+
 .index_icon{
   width: 70rpx;
   height: 70rpx;
@@ -118,4 +119,106 @@ justify-content: space-evenly;
   width: 100%;
   height: 3rpx;
 
+}
+.btn{
+    display:flex;
+    flex-direction:row;
+}
+.button{
+  margin: 50rpx;
+  width:200rpx;
+  height: 125rpx;
+  border-radius: 100rpx;
+  background:linear-gradient(to left,#F6D365, #FDA085);
+  color: white;
+  line-height: 35rpx;
+  align-items: center;
+  text-align: center;
+  transition: width 0.4s;
+  -webkit-transition: width 0.4s;
+}
+.button1{
+    box-shadow:0px 0px 20px rgba(153, 153, 153, 0.781) inset;
+  }
+.btnimg {
+  margin-right: 8rpx;
+  width: 50rpx;
+  height: 50rpx;
+}
+.btnfont{
+  font-weight: 160;
+  font-size:30rpx;
+}
+/* 弹窗的样式 */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+ 
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 40%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+ 
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 40rpx;
+  color: #fe8848;
+  text-align: center;
+}
+ 
+.modal-content {
+  padding: 50rpx 32rpx;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tuijian_img {
+  margin-right: 8rpx;
+  width: 275rpx;
+  height: 250rpx;
+  border-radius: 30%;
+
+}
+.tuijian_font{
+  font-weight: 160;
+
+  font-size:35rpx;
+  margin-top:15rpx ;
+}
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-left: 1px solid #dedede;
+}
+ 
+.btn-confirm {
+  width: 50%;
+  color: #fe8848;
+  text-align: center;
 }
