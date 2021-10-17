@@ -2,7 +2,7 @@
 
 <block wx:if="{{pinglun==''}}">
 <view class='head'>
-<text>这道菜还没有人评论哦</text>
+这道菜还没有人评论哦
 </view>
 </block>
 <block wx:else>
@@ -15,17 +15,20 @@
 {{item.name}}
 </text>
 </view>
-<text>
+<view class='content'>
 {{item.content}}
-</text>
+</view>
 </view>
 <view class="div-line"></view>
 </block>
 
 <!-- </view> -->
 </block>
+<view class='placeholder-view'></view>
 <!-- 发表评论 -->
+
+<view class='btn'>
 <input class='input' type="text" placeholder="说点什么吧" bindinput="getContent" value='{{content}}'>
 </input>
-<button type="primary" bindtap="fabiao">发表评论
-</button>
+<button  style=" width: 150px;height: 35px;" class="dianji" aria-disabled='true' bindtap="fabiao">发表</button>
+</view>

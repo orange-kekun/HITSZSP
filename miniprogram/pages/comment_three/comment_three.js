@@ -24,7 +24,7 @@ Page({
     var userInfo= wx.getStorageSync('user');//判断用户是否登录
     username=userInfo.nickName//获取用户的头像和昵称
     userimage=userInfo.avatarUrl
-    if(userInfo == ''){
+   if(userInfo == ''){
       wx.showModal({
         title: '提示',
         content: '请您先前往“我的”页面授权登录',
@@ -74,13 +74,15 @@ Page({
 
     if(content.length<1)
     {
+
       wx.showToast({
-        icon:'none',
+        icon:'error',
         title: '请先输入评论',
       })
     }
     // 创建新的评论对象并插入
-    newpinglun.content=content
+    else
+    {newpinglun.content=content
     newpinglun.name=username
     newpinglun.image=userimage
     newpinglun.openid=this.data.openid//此处用云函数换为用户名称
@@ -108,7 +110,10 @@ Page({
   wx.hideLoading()
   }).catch(res=>{console.log("发表失败",res)
   wx.hideLoading()})
-}})},
+}
+}
+
+})},
 
 
 
