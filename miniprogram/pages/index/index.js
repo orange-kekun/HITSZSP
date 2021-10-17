@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loadingHidden:true,
     showModal: false,
     items1:[],
     items2:[],
@@ -104,9 +105,9 @@ Page({
         })
         console.log('赋值',this.data.xing)
         console.log('赋值',this.data.renqi)
-
         }).catch(err=>{console.log(err)})
-    
+
+
 
   },
   

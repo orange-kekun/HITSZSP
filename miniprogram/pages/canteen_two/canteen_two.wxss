@@ -20,12 +20,12 @@ page{
   text-align: center;  
 }  
 /*左侧栏list的item*/  
-.nav_left .nav_left_items{ 
-  /* 文字居中 */
-  display: flex;
-  align-items: center;
-  justify-content: center; 
-  /*每个高30px*/  /*尝试直接调高一点*/
+.nav_left .nav_left_items{
+    /* 文字居中 */
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+  /*每个高30px*/ /*尝试调成130rpx*/ 
   height: 130rpx;   
   /*再设上下padding增加高度，总高42px*/  
   padding: 12rpx 0;  
@@ -75,7 +75,7 @@ width: 100%;
 .nav_right .nav_right_items .image{  
  height: 180rpx;
  width: 180rpx;
- border-radius: 2px;
+ border-radius: 10%;
 
 }  
 .nav_right .nav_right_items .text{  
@@ -87,11 +87,12 @@ padding: 10rpx;
 } 
 .nav_right .nav_right_items .text .head
 {
-  font:bold 45rpx "宋体";
+  font:bold 42rpx "宋体";
   color:#2e2e2e;
 }
 .nav_right .nav_right_items .text .price
 {
+  margin-bottom: 20rpx;
   font-size: 30rpx;
   color:#2e2e2e;
 }
