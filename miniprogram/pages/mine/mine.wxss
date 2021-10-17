@@ -116,7 +116,7 @@
   height: 46rpx;
 }
 .btnfont{
-  font-weight: 160;
+  font-weight: normal;
   font-size:30rpx;
 }
 .dibufont{

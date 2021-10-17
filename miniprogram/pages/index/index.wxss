@@ -21,7 +21,7 @@ margin-right: 6rpx;
 .box-image
 {
   width: 350rpx;
-  height: 350rpx;
+  height: 320rpx;
   border-radius: 60rpx;
 }
 .box-view
@@ -197,8 +197,6 @@ justify-content: space-evenly;
 
 }
 .tuijian_font{
-  font-weight: 160;
-
   font-size:35rpx;
   margin-top:15rpx ;
 }

@@ -1,5 +1,5 @@
 <view class="pagecolor"><search></search>
-
+  <loading hidden="{{loadingHidden}}">加载中...</loading>   
   <!-- /*顶部轮播图*/ -->
   <swiper  class='s-box'autoplay="true" circular="true"   next-margin="0">
   <swiper-item class='s-one'>
