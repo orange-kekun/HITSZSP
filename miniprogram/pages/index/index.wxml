@@ -26,7 +26,7 @@
     <view class='sort-box'><navigator url="/pages/canteen_one/canteen_one"> <image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/1.jpg"></image></navigator></view>
     <view class='sort-box'><navigator url="/pages/canteen_two/canteen_two"><image   class='sort-picture' src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/2.jpg"></image></navigator></view>
     <view class='sort-box'><navigator url="/pages/canteen_three/canteen_three"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/3.jpg"></image></navigator></view>
-    <view class='sort-box'><navigator url="/pages/canteen_three/canteen_three"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/4.jpg"></image></navigator></view>
+    <view class='sort-box'><navigator url="/pages/canteen_four/canteen_four"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/4.jpg"></image></navigator></view>
   </view>
 </view>
 

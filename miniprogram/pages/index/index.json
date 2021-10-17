@@ -4,7 +4,7 @@
     "search":"../../components/search/search"
   },
     "navigationBarBackgroundColor": "#FE8848",
-    "navigationBarTitleText": "HITSZ-RECIPE",
+    "navigationBarTitleText": "HITSZ食谱",
     "navigationBarTextStyle": "white"
   
 }
