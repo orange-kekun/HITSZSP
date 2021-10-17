@@ -60,4 +60,27 @@
     </view>
   </scroll-view>
 </view>
+<!-- 弹窗 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <view class="modal-title">为你推荐</view>
+  <view class="modal-content">
+    <image class='tuijian_img' src='{{tuijian.picture}}'></image>
+      <view class="tuijian_font">{{tuijian.meal_name}}</view>
+  </view>
+  <view class="modal-footer">
+    <navigator class="btn-confirm"  style="display:flexbox" url="../details/details?dangkou_id={{tuijian_id}}&&meal_id={{tuijian_mealid}}" data-status="confirm">前往</navigator>
+    <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+
+  </view>
+</view>
+  <!-- 随机推荐 -->
+<view class="allbox">
+  <view class='tip'><image class='index_icon' src="../../images/index_icon/wenhao.png"></image>不知道吃什么？点下面试试↓↓↓</view>
+  <view class="div-line"></view>
+  <button class="button" hover-class="button1" bindtap="shuiji"><image class='btnimg' src='../../images/index_icon/shuiji.png'></image>
+      <view class="btnfont">随机推荐</view></button>
+</view>
+
+
   </view>

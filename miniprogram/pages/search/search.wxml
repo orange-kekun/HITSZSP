@@ -6,7 +6,7 @@
             <!-- 最初始时的搜索框 -->
                 <view class="weui-search-bar__box">
                     <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
-                    <input type="text" class="weui-search-bar__input" v-model="{{inputVal}}" bindblur='changeSearch' bindconfirm='changeSearch' bindinput='changeSearch' placeholder="输入你想吃的东西吧~"/>
+                    <input type="text" class="weui-search-bar__input" v-model="{{inputVal}}" bindblur='changeSearch' bindconfirm='changeSearch' bindinput='changeSearch' placeholder="输入你想吃的东西吧~" value="{{inputVal}}"/>
                 </view>
                 <!-- 可编辑时的搜索框 -->
                 <!-- <label class="weui-search-bar__label"  bindtap="showInput">
@@ -15,7 +15,8 @@
                 </label> -->
             </view>
             <!-- 取消搜索 -->
-            <button style="width: 75px;margin-left: 5px;" class="weui-search-bar__cancel-btn" bindtap="showInput">搜索</button>
+            <button wx:if="{{search_list1.length==0&&search_list2.length==0&&search_list3.length==0}}" style="width: 75px;margin-left: 5px;" class="weui-search-bar__cancel-btn" bindtap="showInput" bindinput='changeSearch'>搜索</button>
+            <button wx:else style="width: 75px;margin-left: 5px;" class="weui-search-bar__cancel-btn" bindconfirm="clearInput" bindtap="inputTyping1">取消</button>
         </view>
     </view>
 <!-- 1 -->
