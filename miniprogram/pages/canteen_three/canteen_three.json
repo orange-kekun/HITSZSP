@@ -4,5 +4,6 @@
   },
   "navigationBarBackgroundColor": "#FE8848",
   "navigationBarTitleText": "三食堂",
-  "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+"disableScroll": true
 }

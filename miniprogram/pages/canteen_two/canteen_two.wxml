@@ -3,7 +3,7 @@
 <!-- 主盒子 -->
 <view class="con">
  <!--左侧栏-->
- <view class="nav_left">
+ <scroll-view class="nav_left"  scroll-y="true" >
    <block wx:for="{{items}}" wx:key="index">
      <view class="nav_left_items{{index==curindex?'active':''}}" data-index="{{index}}"
      bindtap="tap">
@@ -11,7 +11,7 @@
       
       </view>
    </block>
- </view>
+ </scroll-view>
  <!--右侧栏-->
  <view class="nav_right">
        <!-- 右侧的滚动scroll-view -->
