@@ -37,7 +37,7 @@ Page({
         }
       })
     }
-    wx.cloud.database().collection("canteen3")
+    wx.cloud.database().collection("canteen2")
     .doc(options.d_id)
     .get()
     .then(res=>{
@@ -107,8 +107,16 @@ Page({
     pinglun:pinglunArr,
     content:''
   })
+  wx.showToast({
+    icon:'success',
+    title: '发表成功',
+  })
   wx.hideLoading()
   }).catch(res=>{console.log("发表失败",res)
+  wx.showToast({
+    icon:'error',
+    title: '发表失败',
+  })
   wx.hideLoading()})
 }
 }

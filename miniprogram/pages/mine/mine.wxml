@@ -1,12 +1,13 @@
 <!--pages/mine/mine.wxml-->
 <view class="pagecolor">
   <view class='head head-height'>
-    <block wx:if="{{!hasUserInfo && canIUse}}">
+    <block wx:if="{{!hasUserInfo}}">
       <view class="userinfo">
         <image class="userinfo-avatar" src="../../images/mineicon/myhead.png" mode="cover"></image>
         <text class="userinfo-nickname">微信授权</text>
       </view>
-      <button class="login-button head-height" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <button class="login-button head-height"  wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"></button>
+      <button class="login-button head-height"  wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
     </block>
     <block wx:else>
       <view class="userinfo">

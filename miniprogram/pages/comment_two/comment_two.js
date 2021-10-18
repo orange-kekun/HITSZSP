@@ -107,8 +107,16 @@ Page({
     pinglun:pinglunArr,
     content:''
   })
+  wx.showToast({
+    icon:'success',
+    title: '发表成功',
+  })
   wx.hideLoading()
   }).catch(res=>{console.log("发表失败",res)
+  wx.showToast({
+    icon:'error',
+    title: '发表失败',
+  })
   wx.hideLoading()})
 }
 }
