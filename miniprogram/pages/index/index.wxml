@@ -34,7 +34,7 @@
 <view class="allbox">
   <view class='tip'><image class='index_icon' src='../../images/index_icon/new.png'></image>新品推荐</view>
   <view class="div-line"></view>
-  <scroll-view scroll-x lower-threshold="0" bindscrolltolower="tanchuang">
+  <scroll-view scroll-x lower-threshold="6px" bindscrolltolower="tanchuang">
     <view class="srcout">
       <block wx:for="{{xing}}" wx:key="value">
         <view class='srcbox'>
@@ -49,7 +49,7 @@
 <view class="allbox">
   <view class='tip'><image class='index_icon' src="../../images/index_icon/hot.png"></image>人气推荐</view>
   <view class="div-line"></view>
-  <scroll-view scroll-x lower-threshold="0" bindscrolltolower="tanchuang1">
+  <scroll-view scroll-x lower-threshold="6px" bindscrolltolower="tanchuang1">
    <view class="srcout">
     <block wx:for="{{renqi}}" wx:key="value">
       <view class='srcbox'>

@@ -30,5 +30,5 @@
 <view class='btn'>
 <input class='input' type="text" placeholder="说点什么吧" bindinput="getContent" value='{{content}}'>
 </input>
-<button  style=" width: 150px;height: 35px;" class="dianji" aria-disabled='true' bindtap="fabiao">发表</button>
+<button  style=" width: 150px;height: 35px;margin-right: 10px;" class="dianji" aria-disabled='true' bindtap="fabiao">发表</button>
 </view>

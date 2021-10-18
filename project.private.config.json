@@ -47,6 +47,12 @@
           "pathName": "pages/index/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "pages/comment_two/comment_two",
+          "pathName": "pages/comment_two/comment_two",
+          "query": "id=0&d_id=2003",
+          "scene": null
         }
       ]
     }

@@ -1,12 +1,13 @@
 <!--pages/mine/mine.wxml-->
 <view class="pagecolor">
   <view class='head head-height'>
-    <block wx:if="{{!hasUserInfo && canIUse}}">
+    <block wx:if="{{!hasUserInfo}}">
       <view class="userinfo">
         <image class="userinfo-avatar" src="../../images/mineicon/myhead.png" mode="cover"></image>
         <text class="userinfo-nickname">微信授权</text>
       </view>
-      <button class="login-button head-height" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <button class="login-button head-height"  wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"></button>
+      <button class="login-button head-height"  wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo"></button>
     </block>
     <block wx:else>
       <view class="userinfo">
@@ -33,7 +34,7 @@
       <image class='btnimg' src='../../images/mineicon/askme.png'></image>
       <view class="btnfont">吐槽一下/上新告知</view>
     </button>
-    <view class="dibufont" style="position:fixed; bottom:0;width: 750rpx" >v1.0</view>
+    <view class="dibufont" style="position:fixed; bottom:0;width: 750rpx" >v1.2</view>
   </view>
   
 </view>
