@@ -41,6 +41,8 @@ Page({
         })
       }
     })
+    wx.setStorageSync('user',this.data.userInfo)
+    console.log(wx.getStorageSync('user'))
   },
   getUserInfo(e) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息

@@ -31,8 +31,9 @@ Page({
         showCancel: false,
         success (res){
           if (res.confirm) {
-            wx.navigateBack({
-            })
+            wx.switchTab({  
+              url: '../mine/mine'  
+            });
           } 
         }
       })

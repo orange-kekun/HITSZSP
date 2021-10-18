@@ -31,13 +31,14 @@ Page({
         showCancel: false,
         success (res){
           if (res.confirm) {
-            wx.navigateBack({
-            })
+            wx.switchTab({  
+              url: '../mine/mine'  
+            });
           } 
         }
       })
     }
-    wx.cloud.database().collection("canteen2")
+    wx.cloud.database().collection("canteen3")
     .doc(options.d_id)
     .get()
     .then(res=>{

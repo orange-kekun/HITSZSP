@@ -20,9 +20,11 @@ margin-right: 6rpx;
 }
 .box-image
 {
-  width: 350rpx;
-  height: 320rpx;
+  width: 340rpx;
+  height: 300rpx;
   border-radius: 60rpx;
+  margin-left: 10rpx;
+  margin-right: 10rpx;
 }
 .box-view
 {
@@ -93,10 +95,8 @@ justify-content: space-evenly;
     display: flex;
     flex-direction: row;
     align-items: center;
-    height: 80rpx;
     font-weight: 300;
     background:linear-gradient(to top, white, #eeb174);
-
     border-top-left-radius: 10px;
     border-top-right-radius:10px;
 }
@@ -104,13 +104,14 @@ justify-content: space-evenly;
 .index_icon{
   width: 70rpx;
   height: 70rpx;
+  margin-left: 5rpx;
 }
 
 .allbox{
   border: 3rpx solid white;
   background-color: white;
  border-radius: 30rpx;
-   padding: 0 2rpx 10rpx 2rpx;
+   padding: 0 0rpx 10rpx 0rpx;
    margin:20rpx 10rpx;
    border-color:#E0E3DA;
 }
