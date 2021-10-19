@@ -7,7 +7,7 @@
 /*分享按钮*/
 .fenxiang{text-align: center;float:right;}
 .fenxiang button::after{border: none;}
-.fxbtn{background: none;border:none;margin:0px;padding:0px;border-radius: 0px;font-size: 12px;}
+.fxbtn{background: none;border:none;margin:0px;padding:0px;border-radius: 0px;font-size: 12px; display: flex;flex-direction: column;margin-top: 5px;margin-bottom: 5px;}
 .fenxiang image{  width: 30px; height: 30px;float:right;}
 
 .flex{ display: -webkit-box;display: -webkit-flex;  display: -ms-flexbox; display: flex; width: 100%;}
@@ -80,7 +80,7 @@
   width: 100%;
   height: 3rpx;
 }
-.content{font-size:20px;font-family: youyuan;}
+.content{font-size:18px;font-family: youyuan;}
 .btn-item {
   
    display: flex;

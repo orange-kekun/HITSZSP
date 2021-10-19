@@ -1,5 +1,5 @@
 <view class="pagecolor"><search></search>
-
+  <loading hidden="{{loadingHidden}}">加载中...</loading>   
   <!-- /*顶部轮播图*/ -->
   <swiper  class='s-box'autoplay="true" circular="true"   next-margin="0">
   <swiper-item class='s-one'>
@@ -26,7 +26,7 @@
     <view class='sort-box'><navigator url="/pages/canteen_one/canteen_one"> <image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/1.jpg"></image></navigator></view>
     <view class='sort-box'><navigator url="/pages/canteen_two/canteen_two"><image   class='sort-picture' src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/2.jpg"></image></navigator></view>
     <view class='sort-box'><navigator url="/pages/canteen_three/canteen_three"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/3.jpg"></image></navigator></view>
-    <view class='sort-box'><navigator url="/pages/canteen_three/canteen_three"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/4.jpg"></image></navigator></view>
+    <view class='sort-box'><navigator url="/pages/canteen_four/canteen_four"><image  class='sort-picture'  src="cloud://hitsz-recipe-formal-1cosd953108c.6869-hitsz-recipe-formal-1cosd953108c-1304092686/cateenicon/4.jpg"></image></navigator></view>
   </view>
 </view>
 
@@ -34,7 +34,7 @@
 <view class="allbox">
   <view class='tip'><image class='index_icon' src='../../images/index_icon/new.png'></image>新品推荐</view>
   <view class="div-line"></view>
-  <scroll-view scroll-x lower-threshold="0" bindscrolltolower="tanchuang">
+  <scroll-view scroll-x lower-threshold="6px" bindscrolltolower="tanchuang">
     <view class="srcout">
       <block wx:for="{{xing}}" wx:key="value">
         <view class='srcbox'>
@@ -49,7 +49,7 @@
 <view class="allbox">
   <view class='tip'><image class='index_icon' src="../../images/index_icon/hot.png"></image>人气推荐</view>
   <view class="div-line"></view>
-  <scroll-view scroll-x lower-threshold="0" bindscrolltolower="tanchuang1">
+  <scroll-view scroll-x lower-threshold="6px" bindscrolltolower="tanchuang1">
    <view class="srcout">
     <block wx:for="{{renqi}}" wx:key="value">
       <view class='srcbox'>
