@@ -3,7 +3,7 @@
 <!-- 主盒子 -->
 <view class="con">
  <!--左侧栏-->
- <scroll-view class="nav_left" scroll-y="true" >
+ <scroll-view class="nav_left" enable-flex scroll-y="true" >
    <block wx:for="{{items}}" wx:key="index">
      <view class="nav_left_items{{index==curindex?'active':''}}" data-index="{{index}}"
      bindtap="tap">
