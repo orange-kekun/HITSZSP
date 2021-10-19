@@ -25,7 +25,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-     //获取用户的openid
+     //获取用户的openid 
      var userInfo= wx.getStorageSync('user');//判断用户是否登录
      var username=userInfo.nickName//获取用户的头像和昵称
      var userimage=userInfo.avatarUrl

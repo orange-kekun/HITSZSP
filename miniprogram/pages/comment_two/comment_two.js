@@ -97,7 +97,7 @@ Page({
         name:'pj',
         data:
         {
-        canteen:'canteen3',
+        canteen:'canteen2',
         dangkou:d_id,
         meal_id:meal_id,
         pj:pinglunArr,
