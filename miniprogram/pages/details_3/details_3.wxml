@@ -1,5 +1,5 @@
 <!--pages/details/details.wxml-->
-
+<loading hidden="{{loadingHidden}}">加载中</loading>
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" class="banner" duration="{{duration}}" circular="{{duration}}">
     <swiper-item>
       <image src="{{items.dangkou.meal[meal_id].picture}}" class="slide-image" mode="aspectFill" data-src='{{items.dangkou.meal[meal_id].picture}}'/>
