@@ -22,11 +22,17 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    if(wx.getStorageSync('user')==''){
+      this.setData({
+        hasUserInfo: true
+      })
+    }
     if (wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
       })
     }
+
   },
       //兼容低版本用getUseInfo,推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
   getUserProfile(e) {
