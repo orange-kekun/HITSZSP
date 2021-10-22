@@ -22,20 +22,26 @@ Page({
    * 生命周期函数--监听页面加载
    */ 
   onLoad: function (options) {
-
-    if(wx.getStorageSync('user')==''){
+    if (app.globalData.userInfo) {
+      this.setUserInfo(app.globalData.userInfo);
+    }
+    if(wx.getStorageSync('user')!=''){
       this.setData({
+<<<<<<< HEAD
 
         hasUserInfo: false
 
+=======
+        hasUserInfo: true,
+>>>>>>> 8b60f1526d2a791b49ca716dd74a41103fef5b2c
       })
+      this.setUserInfo(wx.getStorageSync('user'))
     }
-    if (wx.getUserProfile) {
+    if(wx.getUserProfile) {
       this.setData({
         canIUseGetUserProfile: true
       })
     }
-
   },
       //兼容低版本用getUseInfo,推荐使用wx.getUserProfile获取用户信息，开发者每次通过该接口获取用户个人信息均需用户确认
   getUserProfile(e) {
@@ -44,6 +50,7 @@ Page({
     wx.getUserProfile({
       desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
+<<<<<<< HEAD
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
@@ -55,12 +62,26 @@ Page({
       }
     })
  
+=======
+        this.setUserInfo(res.userInfo);
+      }
+    })
+>>>>>>> 8b60f1526d2a791b49ca716dd74a41103fef5b2c
   },
   getUserInfo(e) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
+    this.setUserInfo(e.detail.userInfo);
   },
+  setUserInfo: function (userInfo) {
+    if (userInfo != null) {
+      app.globalData.userInfo = userInfo
+      console.log(userInfo)
+      wx.setStorageSync('user', userInfo)//缓存用户信息，用于检验用户是否授权登录
+      this.setData({
+        userInfo: userInfo,
+        hasUserInfo: true
+      })
+      
+    }
+  }
 })

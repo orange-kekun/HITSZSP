@@ -45,6 +45,7 @@ Page({
      }
     const db=wx.cloud.database()
     const _=db.command
+    if(userInfo != ''){
     wx.cloud.callFunction({
       name: 'getOpenid',
       complete: res => { 
@@ -149,7 +150,7 @@ Page({
          })
       }
     })
-
+    }
   },
 
   /**
