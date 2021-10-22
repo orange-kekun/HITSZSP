@@ -2,7 +2,7 @@ let username=''
 let userimage=''
 let d_id=''
 let meal_id=''//由detail页面传递的菜品编号的信息
-let openid=''
+//let openid=''
 Page({
 
   /**
@@ -22,8 +22,8 @@ Page({
     d_id=options.d_id
     meal_id=options.id
     var userInfo= wx.getStorageSync('user');//判断用户是否登录
-    username=userInfo.nickName//获取用户的头像和昵称
-    userimage=userInfo.avatarUrl
+      username=userInfo.nickName,//获取用户的头像和昵称
+      userimage=userInfo.avatarUrl
    if(userInfo == ''){
       wx.showModal({
         title: '提示',
@@ -64,16 +64,14 @@ Page({
   fabiao()
   {
     var newpinglun={name:'',content:'',image:'',openid:''}
-    var content=this.data.content
     wx.cloud.callFunction({
       name: 'getOpenid',
       complete: res => { 
-        openid=res.result.openid
         this.setData({
           openid: res.result.openid
         })
 
-    if(content.length<1)
+    if(this.data.content.length<1)
     {
 
       wx.showToast({
@@ -83,7 +81,7 @@ Page({
     }
     // 创建新的评论对象并插入
     else
-    {newpinglun.content=content
+    {newpinglun.content=this.data.content
     newpinglun.name=username
     newpinglun.image=userimage
     newpinglun.openid=this.data.openid//此处用云函数换为用户名称

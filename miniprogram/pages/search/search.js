@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+      loadingHidden:true,
     inputVal: '',
     inputShowed: true,
     search_list1:[],
@@ -26,8 +27,16 @@ Page({
     this.setData({
       search_list1: [],
       search_list2: [],
-      search_list3: []
+      search_list3: [],
+      loadingHidden:false
      })
+     if(this.data.inputVal.length==0){
+      wx.showToast({
+        title: '不能搜索空气哦',
+        icon: 'error',
+        duration: 2000
+      })
+    }
     this.inputTyping()
      this.setData({
        inputShowed: false
@@ -69,10 +78,9 @@ Page({
     .then(res=>{
        console.log("sucess",res)
      this.setData({
-      items:res.data
+      items:res.data,
       })
       console.log("输入数据",this.data.inputVal)
-      
   if(this.data.inputVal.length >0 ){
     var h=0
       for (var i = 0; i < this.data.items.length; i++){
@@ -160,13 +168,6 @@ Page({
              }
         }
       }
-      if(this.data.inputVal.length===0){
-        wx.showToast({
-          title: '不能搜索空气哦',
-          icon: 'error',
-          duration: 2000
-        })
-      }
       if (this.data.inputVal.length>0&&this.data.search_list1.length === 0&&this.data.search_list2.length === 0&&this.data.search_list3.length === 0) {
         wx.showToast({
           title: '没找到呢qaq',
@@ -175,6 +176,9 @@ Page({
         })
 
       }      else{
+        this.setData({
+          loadingHidden:true
+        })
         wx.showToast({
           title: '找到啦！',
           icon: 'success',

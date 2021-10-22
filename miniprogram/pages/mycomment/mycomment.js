@@ -6,6 +6,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loadingHidden:false,
     dangkou1_id:[],
     dangkou2_id:[],
     dangkou3_id:[],
@@ -150,6 +151,9 @@ Page({
                 }
              }
            }
+           this.setData({
+            loadingHidden:true
+          })
           }).catch(res=>{
             console.log("failed",res)
          })

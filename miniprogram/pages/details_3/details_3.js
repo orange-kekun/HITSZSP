@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loadingHidden:false,
     canteen_all:'',
     newsList: [], //列表数据
     iscard: [], //打过卡的id集合
@@ -120,11 +121,15 @@ Page({
              is_shoucang: this.data.is_shoucang,
             })
            wx.setStorageSync('cang', is_shoucang);
+           this.setData({
+            loadingHidden:true
+          })
          })
        .catch(res=>{
           console.log("failed",res)
        })
       }
+    
     })
    },
 

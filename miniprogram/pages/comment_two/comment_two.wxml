@@ -8,7 +8,7 @@
 <block wx:else>
 <block wx:for="{{pinglun}}" wx:key='index'>
 <!-- 展示评论者的微信头像和名称 -->
-<view class="{{index==0?'head':'box'}}">
+<view class="box">
 <view class='user'>
 <image class='tupian' src="{{item.image}}"></image>
 <text >

@@ -33,7 +33,7 @@ border-radius:50%;
 }
 .content
 {
-width: 100%;
+
 font-size: large;
  padding-top: 30rpx;
  padding-bottom: 30rpx;

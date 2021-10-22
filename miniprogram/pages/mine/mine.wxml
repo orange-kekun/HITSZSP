@@ -13,7 +13,7 @@
       <view class="userinfo">
         <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
         <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-      </view>
+      </view> 
     </block>
   </view>
 
@@ -34,7 +34,7 @@
       <image class='btnimg' src='../../images/mineicon/askme.png'></image>
       <view class="btnfont">吐槽一下/上新告知</view>
     </button>
-    <view class="dibufont" style="position:fixed; bottom:0;width: 750rpx" >v1.2</view>
+    <view class="dibufont" style="position:fixed; bottom:0;width: 750rpx" >v1.3</view>
   </view>
   
 </view>

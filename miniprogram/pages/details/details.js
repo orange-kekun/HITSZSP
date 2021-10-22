@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loadingHidden:false,
     canteen_all:'',
     newsList: [], //列表数据
     iscard: [], //打过卡的id集合
@@ -118,6 +119,9 @@ Page({
            console.log(res.data)
            that.setData({
              is_shoucang: this.data.is_shoucang,
+            })
+            this.setData({
+              loadingHidden:true
             })
            wx.setStorageSync('cang', is_shoucang);
          })
