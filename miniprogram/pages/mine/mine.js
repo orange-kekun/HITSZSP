@@ -25,7 +25,9 @@ Page({
 
     if(wx.getStorageSync('user')==''){
       this.setData({
+
         hasUserInfo: false
+
       })
     }
     if (wx.getUserProfile) {

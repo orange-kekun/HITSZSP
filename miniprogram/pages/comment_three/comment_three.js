@@ -26,6 +26,7 @@ Page({
     var userInfo= wx.getStorageSync('user');//判断用户是否登录
     username=userInfo.nickName
     userimage=userInfo.avatarUrl  
+
    if(userInfo == ''){
       wx.showModal({
         title: '提示',
@@ -84,8 +85,13 @@ Page({
     // 创建新的评论对象并插入
     else
     {newpinglun.content=this.data.content
+<<<<<<< HEAD
     newpinglun.name=username
     newpinglun.image=userimage
+======= 
+    newpinglun.name=this.data.username
+    newpinglun.image=this.data.userimage
+>>>>>>> 0331bf7d6f66d74fa62c7dcac4bb430cf185edad
     newpinglun.openid=this.data.openid//此处用云函数换为用户名称
     var pinglunArr=this.data.pinglun
     pinglunArr.push(newpinglun)
