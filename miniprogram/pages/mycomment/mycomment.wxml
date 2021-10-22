@@ -1,4 +1,5 @@
 <!--pages/mycollect/mycollect.wxml-->
+<loading hidden="{{loadingHidden}}">加载中</loading>
 <view class="pagecolor">
   <view class='head head-height'>
     <!-- <block wx:if="{{!hasmyshoucang && canIUse}}">
