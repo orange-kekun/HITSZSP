@@ -1,0 +1,80 @@
+.input{
+  border:solid 5rpx gainsboro;
+  border-radius: 5rpx;
+}
+.tupian
+{
+width: 100rpx;
+height: 100rpx;
+border-radius:50%;
+}
+.user
+{
+  display: flex;
+  justify-content:flex-start;
+  padding-left: 15rpx;
+}
+.div-line{
+  background: #E0E3DA;
+  width: 100%;
+  height: 5rpx;
+  }
+.box{
+  background-color: rgb(252, 252, 252);
+}
+.head
+{
+  width: 100%;
+  height: 100px;
+  background:linear-gradient(#fe8848,white);
+  align-items: center;
+  font-size: larger;
+  text-align: center;
+}
+.content
+{
+
+font-size: large;
+ padding-top: 30rpx;
+ padding-bottom: 30rpx;
+ padding-left: 20rpx;
+}
+.btn
+{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  height: 60px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #fff;
+  z-index: 999
+}
+.btn input
+{
+  margin-left:30rpx ;
+  padding-left: 10rpx;
+  margin-right:10rpx;
+  margin-top:10rpx ;
+  border-radius: 30rpx;
+  background-color:rgb(248, 248, 248) ;
+}
+.dianji
+{
+
+  background: linear-gradient(to left,#F6D365, #FDA085);
+  color: #fff;
+  border-radius: 50px;
+  padding: 0px;
+  width: 150px;
+  height: 35px;
+  line-height: 35px;
+  margin-top: 5px;
+  margin-right: 15px
+}
+.placeholder-view {
+  width: 100%;
+  height: 150rpx;
+}

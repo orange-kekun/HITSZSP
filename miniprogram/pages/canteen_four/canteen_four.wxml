@@ -1,3 +1,41 @@
-<view style="justify-content: center;align-items: center;display: flex;height: 500px;">
-<image style="width:250px;height:450px;" src="https://s3.bmp.ovh/imgs/2021/10/85f9a018d0774ca5.jpg" ></image>
+<searchbar></searchbar>
+
+<!-- 主盒子 -->
+<view class="con">
+ <!--左侧栏-->
+ <scroll-view class="nav_left"   scroll-y="true" style="height:100%" >
+   <block wx:for="{{items}}" wx:key="index">
+     <view class="nav_left_items{{index==curindex?'active':''}}" data-index="{{index}}"
+     bindtap="tap">
+       {{item.dangkou.dangkou_name}}
+      </view>
+   </block>
+ </scroll-view>
+ <!--右侧栏-->
+ <view class="nav_right">
+       <!-- 右侧的滚动scroll-view -->
+    <scroll-view class="srcright" enable-flex scroll-y="true" style="height:1334rpx">
+
+    <block wx:for="{{items[curindex].dangkou.meal}}" wx:key="value">
+       <!-- 档口的一个菜品 -->
+      <navigator url="../details_4/details_4?dangkou_id={{items[curindex]._id}}&&meal_id={{index}}">
+        <view class="nav_right_items">
+        <!-- 左部分为图片 -->
+          <view class="image">
+             <image src="{{item.picture}}" class="image"></image>
+         </view>   
+          <!-- 右部分为文字 -->
+         <view class="text">
+           <text class="head">{{item.meal_name}}</text>
+           <text class="price">价格：{{item.price}}</text>
+          </view>
+
+      </view>     
+       </navigator> 
+    </block>
+
+    </scroll-view>
+
+ 
+ </view>
 </view>

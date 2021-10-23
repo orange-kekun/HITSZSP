@@ -15,10 +15,11 @@ Page({
   onLoad: function (options) {
     const db=wx.cloud.database()
     const _=db.command
-    db.collection("canteen3").get().then(res=>{console.log(res.data)
+    db.collection("canteen4").get().then(res=>{console.log(res.data)
     this.setData({
       items:res.data
     })
+    console.log("items数据",this.data.items)
     }).catch(err=>{console.log(err)})
   },
   tap:function(e)

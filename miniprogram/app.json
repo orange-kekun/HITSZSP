@@ -1,10 +1,10 @@
 {
   "pages": [
-    
     "pages/index/index",
     "pages/details_1/details_1",
     "pages/details_2/details_2",
     "pages/details_3/details_3",
+    "pages/details_4/details_4",
     "pages/details/details",
     "pages/search/search",
     "pages/mine/mine",
@@ -17,8 +17,10 @@
     "pages/mycomment/mycomment",
     "pages/comment_one/comment_one",
     "pages/comment_three/comment_three",
-    "pages/comment_two/comment_two"
-
+    "pages/comment_two/comment_two",
+    "pages/comment_four/comment_four",
+    "pages/detais_4/details_4"
+ 
   ],
   "window": {
     "backgroundColor": "#FE8848",

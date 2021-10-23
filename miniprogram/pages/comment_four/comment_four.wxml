@@ -1,0 +1,34 @@
+<!-- 上方是历史评价信息 -->
+
+<block wx:if="{{pinglun==''}}">
+<view class='head'>
+这道菜还没有人评论哦
+</view>
+</block>
+<block wx:else>
+<block wx:for="{{pinglun}}" wx:key='index'>
+<!-- 展示评论者的微信头像和名称 -->
+<view class="box">
+<view class='user'>
+<image class='tupian' src="{{item.image}}"></image>
+<text >
+{{item.name}}
+</text>
+</view>
+<view class='content'>
+{{item.content}}
+</view>
+</view>
+<view class="div-line"></view>
+</block>
+
+<!-- </view> -->
+</block>
+<view class='placeholder-view'></view>
+<!-- 发表评论 -->
+
+<view class='btn'>
+<input class='input' type="text" placeholder="说点什么吧" bindinput="getContent" value='{{content}}'>
+</input>
+<button  style=" width: 150px;height: 35px;margin-right: 10px;" class="dianji" aria-disabled='true' bindtap="fabiao">发表</button>
+</view>

@@ -1,0 +1,98 @@
+<!--pages/details/details.wxml-->
+<loading hidden="{{loadingHidden}}">加载中</loading>
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" class="banner" duration="{{duration}}" circular="{{duration}}">
+    <swiper-item>
+      <image src="{{items.dangkou.meal[meal_id].picture}}" class="slide-image" mode="aspectFill" data-src='{{items.dangkou.meal[meal_id].picture}}'/>
+    </swiper-item>
+</swiper>
+<!--商品幻灯片 end-->
+<view class="info-mealname clear">
+  <view class='mealname'>{{items.dangkou.meal[meal_id].meal_name}} </view>
+  <view class='fenxiang'>
+      <button class="fxbtn" style="width:100%; height:100%" open-type="share" title='快试试这个菜！！' >
+        <image src='../../images/details_icon/fenxiang.png' class="fximage" ></image><view style="font-size: 10px;">分享</view>
+     </button>
+  </view>
+</view>
+<view class="div-line"></view>
+<view class="info-price">
+    <text class="price">￥{{items.dangkou.meal[meal_id].price}}</text>
+</view>
+ 
+<view style="border-top:1px solid E0E3DA;background: #fff; padding:5px 15px;">
+    <view class="clearfix flex grey gridXt">
+      <text class="sub"><block wx:if='{{items.dangkou.meal[meal_id].weidao=="辣"}}'>味道：辣</block><block wx:else>味道：{{items.dangkou.meal[meal_id].weidao}}</block></text>
+      <text class="sub">位置：{{items.dangkou.meal[meal_id].position}}</text>
+    </view>
+</view>
+<view class="div-line"></view>
+<view class="div-line"></view>
+<view class="div-line"></view>
+<block wx:if="{{pjDataList!=''}}">
+  <!--评价-->
+  <view class='pj_box'>
+    <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+     <view class='zhiti' style='float:left;'>菜品评价</view>
+     <view style='float:right;margin-left:2px;margin-top:-1px;'>
+        <image src="../../images/details_icon/jt.png" class="ico_img_jt"></image>
+     </view>
+     <view style='float:right;font-size:12px;color:#A2A2A2;'>
+      <!-- 链接的同时给评论页传递参数，d_id表示档口id,id表示菜品id -->
+      <navigator url="../comment_one/comment_one?id={{meal_id}}&&d_id={{dangkou_id}}">查看全部</navigator>
+     </view>
+     <view class='clear'></view>
+    </view>
+    <!-- <block wx:for="{{pjDataList}}" wx:for-item="item" wx:key="pj">
+      <view class="list_item">
+        <view class='pj_u_info clear'>
+          <view class='header_img'><image src="{{item.headpic}}" mode="aspectFit"></image></view>
+          <view class='name'>{{item.author}}</view>
+          <view class='time'>{{item.add_time}}</view>
+        </view>
+        <view class='pj_cont'>
+          {{item.content}}
+        </view>
+      </view>
+    </block> -->
+</view>
+</block>
+<view class="div-line"></view>
+<!--菜品介绍-->
+<view class='details_box'>
+  <view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+     <view class='zhiti'>菜品介绍</view>
+  </view>
+  <view class="div-line"></view>
+  <view style='padding:10px 0px;'>
+      <view class="content">
+         {{items.dangkou.meal[meal_id].content}}
+      </view>
+    </view>
+</view>
+
+<!--底部浮动 start-->
+<view class="foot-nav mt15">
+  <view class="flex con gridXt tc">
+    <view class="fast-links mr15 flex f12">
+        <view class="btn-item">
+         <button class="dibubtn" open-type="contact" style='width:100%;height:100%'>
+           <image src='../../images/details_icon/kefu.png' class="btn-image"></image>
+          <text style='color: gray;' >上新啦~</text>
+         </button>
+        </view>
+        <view class="btn-item" >
+          <button class="dibubtn" bindtap='shoucangbtn' data-id='{{items.dangkou.meal[meal_id].meal_name}}' style='width:100%;height:100%'>
+            <image wx:if="{{!items.dangkou.meal[meal_id].shoucang}}" src='../../images/details_icon/shoucang.png' class="btn-image"></image>
+            <image wx:else src='../../images/details_icon/shoucang_1.png' class="btn-image1"></image>
+            <text wx:if="{{!items.dangkou.meal[meal_id].shoucang}}" class="iconfont {{items.dangkou.meal[meal_id].shoucang==false?'icon-shoucang1':'icon-shoucang2'}}">收藏</text>
+            <text wx:else class="iconfont {{items.dangkou.meal[meal_id].shoucang==false?'icon-shoucang1':'icon-shoucang2'}}">已收藏</text>
+          </button>
+        </view>
+   </view>
+    <view class="add-cart sub f16">
+      <button class="add-cart-btn" hover-class='add-cart-btn1' bindtap='thumbsup'  data-id='{{items.dangkou.meal[meal_id].meal_name}}' wx:if="{{!items.dangkou.meal[meal_id].daka}}">打卡 </button>
+      <button class="add-cart-btn_active" hover-class='add-cart-btn1_active' bindtap='thumbsup'  data-id='{{items.dangkou.meal[meal_id].meal_name}}' wx:else>已打卡√</button>      
+    </view>
+  </view>
+</view>
+
