@@ -27,13 +27,7 @@ Page({
     }
     if(wx.getStorageSync('user')!=''){
       this.setData({
-<<<<<<< HEAD
-
         hasUserInfo: false
-
-=======
-        hasUserInfo: true,
->>>>>>> 8b60f1526d2a791b49ca716dd74a41103fef5b2c
       })
       this.setUserInfo(wx.getStorageSync('user'))
     }
@@ -50,7 +44,6 @@ Page({
     wx.getUserProfile({
       desc: '用于完善会员资料', // 声明获取用户个人信息后的用途，后续会展示在弹窗中，请谨慎填写
       success: (res) => {
-<<<<<<< HEAD
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true
@@ -61,12 +54,6 @@ Page({
         })
       }
     })
- 
-=======
-        this.setUserInfo(res.userInfo);
-      }
-    })
->>>>>>> 8b60f1526d2a791b49ca716dd74a41103fef5b2c
   },
   getUserInfo(e) {
     // 不推荐使用getUserInfo获取用户信息，预计自2021年4月13日起，getUserInfo将不再弹出弹窗，并直接返回匿名的用户个人信息
